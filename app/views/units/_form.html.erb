@@ -1,0 +1,75 @@
+<%= form_with(model: unit, class: "row g-3") do |form| %>
+  <% if unit.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+        <% unit.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-md-2">
+    <%= form.label :wave, class: "form-label" %>
+    <%= form.number_field :wave, class: "form-control", min: 1, max: 6 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :unique, class: "form-label" %>
+    <%= form.check_box :unique, class: "form-control form-check-input" %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :move, class: "form-label" %>
+    <%= form.select(:move, distance_options, {}, { class: "form-control" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :charge, class: "form-label" %>
+    <%= form.select(:charge, distance_options, {}, { class: "form-control" }) %>
+  </div>
+
+  <div class="col-md-4">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :strength, class: "form-label" %>
+    <%= form.number_field :strength, class: "form-control", min: 1, max: 20 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :perception, class: "form-label" %>
+    <%= form.number_field :perception, class: "form-control", min: 1, max: 20 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :endurance, class: "form-label" %>
+    <%= form.number_field :endurance, class: "form-control", min: 1, max: 20 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :charisma, class: "form-label" %>
+    <%= form.number_field :charisma, class: "form-control", min: 1, max: 20 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :intelligence, class: "form-label" %>
+    <%= form.number_field :intelligence, class: "form-control", min: 1, max: 20 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :agility, class: "form-label" %>
+    <%= form.number_field :agility, class: "form-control", min: 1, max: 20 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :luck, class: "form-label" %>
+    <%= form.number_field :luck, class: "form-control", min: 1, max: 20 %>
+  </div>
+
+  <%= form.submit class: "btn btn-primary" %>
+<% end %>

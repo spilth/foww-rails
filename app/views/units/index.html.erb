@@ -1,0 +1,41 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Units</h1>
+
+<div id="units">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th><i class="fa-solid fa-play"></i></th>
+      <th><i class="fa-solid fa-forward"></i></th>
+      <th>S</th>
+      <th>P</th>
+      <th>E</th>
+      <th>C</th>
+      <th>I</th>
+      <th>A</th>
+      <th>L</th>
+    </tr>
+    </thead>
+    <tbody>
+
+  <% @units.each do |unit| %>
+  <tr>
+    <td><%= link_to unit.name, unit %></td>
+    <td><%= unit.move %></td>
+    <td><%= unit.charge %></td>
+    <td><%= unit.strength %></td>
+    <td><%= unit.perception %></td>
+    <td><%= unit.endurance %></td>
+    <td><%= unit.charisma %></td>
+    <td><%= unit.intelligence %></td>
+    <td><%= unit.agility %></td>
+    <td><%= unit.luck %></td>
+  </tr>
+  <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New unit", new_unit_path, class: "btn btn-primary" %>
