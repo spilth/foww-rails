@@ -1,0 +1,48 @@
+$distance-2-bg: #EE721F;
+$distance-4-bg: #FDE64C;
+$distance-6-bg: #E73430;
+$distance-8-bg: #00A143;
+$distance-10-bg: #009FE0;
+$distance-12-bg: #000000;
+
+$distance-2-fg: #000000;
+$distance-4-fg: #000000;
+$distance-6-fg: #000000;
+$distance-8-fg: #000000;
+$distance-10-fg: #000000;
+$distance-12-fg: #ffffff;
+
+.distance {
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.distance-2 {
+  background: $distance-2-bg;
+  color: $distance-2-fg;
+}
+
+.distance-4 {
+  background: $distance-4-bg;
+  color: $distance-4-fg;
+}
+
+.distance-6 {
+  background: $distance-6-bg;
+  color: $distance-6-fg;
+}
+
+.distance-8 {
+  background: $distance-8-bg;
+  color: $distance-8-fg;
+}
+
+.distance-10 {
+  background: $distance-10-bg;
+  color: $distance-10-fg;
+}
+
+.distance-12 {
+  background: $distance-12-bg;
+  color: $distance-12-fg;
+}
