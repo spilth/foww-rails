@@ -1,3 +1,29 @@
+# == Schema Information
+#
+# Table name: units
+#
+#  id                          :bigint           not null, primary key
+#  agility                     :integer
+#  charge                      :integer
+#  charisma                    :integer
+#  endurance                   :integer
+#  energy_armor                :integer
+#  energy_strong_armor_bonus   :integer
+#  intelligence                :integer
+#  luck                        :integer
+#  move                        :integer
+#  name                        :string
+#  perception                  :integer
+#  physical_armor              :integer
+#  physical_strong_armor_bonus :integer
+#  radiation_armor             :integer
+#  radiation_immunity          :boolean
+#  strength                    :integer
+#  unique                      :boolean
+#  wave                        :integer
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
+#
 class Unit < ApplicationRecord
   validates :wave, presence: true
   validates :name, presence: true
