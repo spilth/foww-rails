@@ -5,4 +5,4 @@ require_relative "config/application"
 
 Rails.application.load_tasks
 
-task default: %w[standard:fix annotate_models]
+task default: %w[standard:fix annotate_models spec]
