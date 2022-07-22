@@ -16,6 +16,9 @@
       <th>I</th>
       <th>A</th>
       <th>L</th>
+      <th><i class="fa-solid fa-shield-halved"></i></th>
+      <th><i class="fa-solid fa-bolt-lightning"></i></th>
+      <th><i class="fa-solid fa-radiation"></i></th>
     </tr>
     </thead>
     <tbody>
@@ -32,6 +35,12 @@
     <td><%= unit.intelligence %></td>
     <td><%= unit.agility %></td>
     <td><%= unit.luck %></td>
+    <td><%= unit.physical_armor %><%= "+#{unit.physical_strong_armor_bonus}" if unit.physical_strong_armor_bonus %></td>
+    <td><%= unit.energy_armor %><%= "+#{unit.energy_strong_armor_bonus}" if unit.energy_strong_armor_bonus %></td>
+    <td>
+      <%= "X" if unit.radiation_immunity %>
+      <%= unit.radiation_armor if !unit.radiation_immunity %>
+    </td>
   </tr>
   <% end %>
     </tbody>

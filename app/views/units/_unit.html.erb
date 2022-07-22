@@ -50,4 +50,20 @@
     <%= unit.luck %>
   </p>
 
+  <p>
+    <i class="fa-solid fa-shield-halved"></i>
+    <%= unit.physical_armor %><%= "+#{unit.physical_strong_armor_bonus}" if unit.physical_strong_armor_bonus %>
+  </p>
+
+  <p>
+    <i class="fa-solid fa-bolt-lightning"></i>
+    <%= unit.energy_armor %><%= "+#{unit.energy_strong_armor_bonus}" if unit.energy_strong_armor_bonus %>
+  </p>
+
+  <p>
+    <i class="fa-solid fa-radiation"></i>
+    <%= "X" if unit.radiation_immunity %>
+    <%= unit.radiation_armor if !unit.radiation_immunity %>
+  </p>
+
 </div>

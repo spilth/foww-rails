@@ -71,5 +71,35 @@
     <%= form.number_field :luck, class: "form-control", min: 1, max: 20 %>
   </div>
 
+  <div class="col-md-2">
+    <%= form.label :physical_armor, class: "form-label" %>
+    <%= form.number_field :physical_armor, class: "form-control", min: 0, max: 10 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :physical_strong_armor_bonus, class: "form-label" %>
+    <%= form.number_field :physical_strong_armor_bonus, class: "form-control", min: 1, max: 10 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :energy_armor, class: "form-label" %>
+    <%= form.number_field :energy_armor, class: "form-control", min: 0, max: 10 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :energy_strong_armor_bonus, class: "form-label" %>
+    <%= form.number_field :energy_strong_armor_bonus, class: "form-control", min: 1, max: 10 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :radiation_immunity, class: "form-label" %>
+    <%= form.check_box :radiation_immunity, class: "form-control form-check-input" %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :radiation_armor, class: "form-label" %>
+    <%= form.number_field :radiation_armor, class: "form-control", min: 0, max: 10 %>
+  </div>
+
   <%= form.submit class: "btn btn-primary" %>
 <% end %>

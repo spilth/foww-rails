@@ -58,13 +58,14 @@ class UnitsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_unit
-      @unit = Unit.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def unit_params
-      params.require(:unit).permit(:wave, :unique, :name, :move, :charge, :strength, :perception, :endurance, :charisma, :intelligence, :agility, :luck)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_unit
+    @unit = Unit.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def unit_params
+    params.require(:unit).permit(:wave, :unique, :name, :move, :charge, :strength, :perception, :endurance, :charisma, :intelligence, :agility, :luck, :physical_armor, :physical_strong_armor_bonus, :energy_armor, :energy_strong_armor_bonus, :radiation_immunity, :radiation_armor)
+  end
 end
