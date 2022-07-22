@@ -66,6 +66,30 @@ class UnitsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def unit_params
-    params.require(:unit).permit(:wave, :unique, :name, :move_range, :charge_range, :strength, :perception, :endurance, :charisma, :intelligence, :agility, :luck, :physical_armor, :physical_strong_armor_bonus, :energy_armor, :energy_strong_armor_bonus, :radiation_immunity, :radiation_armor)
+    params.require(:unit).permit(
+      :wave,
+      :unique,
+      :name,
+      :move_range,
+      :charge_range,
+      :strength,
+      :perception,
+      :endurance,
+      :charisma,
+      :intelligence,
+      :agility,
+      :luck,
+      :physical_armor,
+      :physical_strong_armor_bonus,
+      :energy_armor,
+      :energy_strong_armor_bonus,
+      :radiation_immunity,
+      :radiation_armor,
+      :throw_range,
+      :presence_range,
+      :awareness_range,
+      :battle_cry_range,
+      :search_range
+    )
   end
 end

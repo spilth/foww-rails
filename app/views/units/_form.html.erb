@@ -101,5 +101,30 @@
     <%= form.number_field :radiation_armor, class: "form-control", min: 0, max: 10 %>
   </div>
 
+  <div class="col-md-2">
+    <%= form.label :throw_range, class: "form-label" %>
+    <%= form.select(:throw_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :presence_range, class: "form-label" %>
+    <%= form.select(:presence_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :awareness_range, class: "form-label" %>
+    <%= form.select(:awareness_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :battle_cry_range, class: "form-label" %>
+    <%= form.select(:battle_cry_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :search_range, class: "form-label" %>
+    <%= form.select(:search_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
   <%= form.submit class: "btn btn-primary" %>
 <% end %>

@@ -4,6 +4,8 @@
 #
 #  id                          :bigint           not null, primary key
 #  agility                     :integer
+#  awareness_range             :integer
+#  battle_cry_range            :integer
 #  charge_range                :integer
 #  charisma                    :integer
 #  endurance                   :integer
@@ -16,9 +18,12 @@
 #  perception                  :integer
 #  physical_armor              :integer
 #  physical_strong_armor_bonus :integer
+#  presence_range              :integer
 #  radiation_armor             :integer
 #  radiation_immunity          :boolean
+#  search_range                :integer
 #  strength                    :integer
+#  throw_range                 :integer
 #  unique                      :boolean
 #  wave                        :integer
 #  created_at                  :datetime         not null
