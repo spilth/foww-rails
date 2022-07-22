@@ -37,7 +37,7 @@ class Unit < ApplicationRecord
   validates :agility, presence: true
   validates :luck, presence: true
 
-  DISTANCES = {
+  RANGES = {
     2 => "Orange",
     4 => "Yellow",
     6 => "Red",

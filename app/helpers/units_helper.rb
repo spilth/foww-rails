@@ -1,6 +1,6 @@
 module UnitsHelper
-  def distance_options
-    Unit::DISTANCES.collect { |inches, color| ["#{inches} - #{color}", inches] }
+  def range_options
+    Unit::RANGES.collect { |inches, color| ["#{inches} - #{color}", inches] }
   end
 
   def move_icon(distance)
