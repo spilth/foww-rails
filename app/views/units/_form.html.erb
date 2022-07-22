@@ -23,12 +23,12 @@
 
   <div class="col-md-2">
     <%= form.label :move_range, class: "form-label" %>
-    <%= form.select(:move_range, distance_options, {}, { class: "form-control" }) %>
+    <%= form.select(:move_range, distance_options, {include_blank: true}, { class: "form-control" }) %>
   </div>
 
   <div class="col-md-2">
     <%= form.label :charge_range, class: "form-label" %>
-    <%= form.select(:charge_range, distance_options, {}, { class: "form-control" }) %>
+    <%= form.select(:charge_range, distance_options, {include_blank: true}, { class: "form-control" }) %>
   </div>
 
   <div class="col-md-4">
