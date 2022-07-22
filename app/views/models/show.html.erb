@@ -3,8 +3,5 @@
 <%= render @model %>
 
 <div>
-  <%= link_to "Edit this model", edit_model_path(@model) %> |
-  <%= link_to "Back to models", models_path %>
-
-  <%= button_to "Destroy this model", @model, method: :delete %>
+  <%= link_to "Edit this model", edit_model_path(@model), class: "btn btn-warning" %> <%= button_to "Destroy this model", @model, method: :delete, class: "btn btn-danger" %>
 </div>

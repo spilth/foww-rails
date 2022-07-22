@@ -1,1 +1,1 @@
-json.extract! unit, :wave, :unique, :move, :charge, :name, :strength, :perception, :endurance, :charisma, :intelligence, :agility, :luck
+json.extract! unit, :wave, :unique, :move, :charge, :name, :strength, :perception, :endurance, :charisma, :intelligence, :agility, :luck, :physical_armor, :physical_strong_armor_bonus, :energy_armor, :energy_strong_armor_bonus, :radiation_immunity, :radiation_armor
