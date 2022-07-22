@@ -26,8 +26,8 @@
   <% @units.each do |unit| %>
   <tr>
     <td><%= link_to unit.name, unit %></td>
-    <td><%= move_icon(unit.move) %></td>
-    <td><%= charge_icon(unit.charge) %></td>
+    <td><%= move_icon(unit.move_range) %></td>
+    <td><%= charge_icon(unit.charge_range) %></td>
     <td><%= unit.strength %></td>
     <td><%= unit.perception %></td>
     <td><%= unit.endurance %></td>

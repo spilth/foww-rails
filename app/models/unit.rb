@@ -4,14 +4,14 @@
 #
 #  id                          :bigint           not null, primary key
 #  agility                     :integer
-#  charge                      :integer
+#  charge_range                :integer
 #  charisma                    :integer
 #  endurance                   :integer
 #  energy_armor                :integer
 #  energy_strong_armor_bonus   :integer
 #  intelligence                :integer
 #  luck                        :integer
-#  move                        :integer
+#  move_range                  :integer
 #  name                        :string
 #  perception                  :integer
 #  physical_armor              :integer
@@ -27,8 +27,8 @@
 class Unit < ApplicationRecord
   validates :wave, presence: true
   validates :name, presence: true
-  validates :move, presence: true
-  validates :charge, presence: true
+  validates :move_range, presence: true
+  validates :charge_range, presence: true
   validates :strength, presence: true
   validates :perception, presence: true
   validates :endurance, presence: true
