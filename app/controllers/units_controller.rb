@@ -89,7 +89,18 @@ class UnitsController < ApplicationController
       :presence_range,
       :awareness_range,
       :battle_cry_range,
-      :search_range
+      :search_range,
+      :melee_attribute,
+      :pistol_attribute,
+      :rifle_attribute,
+      :heavy_weapon_attribute,
+      :search_attribute,
+      :battle_cry_attribute,
+      :presence_attribute,
+      :lockpick_attribute,
+      :computers_attribute,
+      :throw_attribute,
+      :health_attribute
     )
   end
 end

@@ -18,36 +18,44 @@
   <p>
     <strong>STR:</strong>
     <%= unit.strength %>
+    <%= skill_icons(unit, "strength") %>
   </p>
 
   <p>
     <strong>PER:</strong>
     <%= unit.perception %>
+    <%= skill_icons(unit, "perception") %>
   </p>
 
   <p>
     <strong>END:</strong>
     <%= unit.endurance %>
+    <%= skill_icons(unit, "endurance") %>
+
   </p>
 
   <p>
     <strong>CHA:</strong>
     <%= unit.charisma %>
+    <%= skill_icons(unit, "charisma") %>
   </p>
 
   <p>
     <strong>INT:</strong>
     <%= unit.intelligence %>
+    <%= skill_icons(unit, "intelligence") %>
   </p>
 
   <p>
     <strong>AGI:</strong>
     <%= unit.agility %>
+    <%= skill_icons(unit, "agility") %>
   </p>
 
   <p>
     <strong>LUC:</strong>
     <%= unit.luck %>
+    <%= skill_icons(unit, "luck") %>
   </p>
 
   <p>
@@ -90,6 +98,4 @@
     <strong>Search Range:</strong>
     <%= unit.search_range %>
   </p>
-
-
 </div>

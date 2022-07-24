@@ -72,6 +72,81 @@
   </div>
 
   <div class="col-md-2">
+    <%= form.label :melee_attribute, class: "form-label" %>
+    <%= form.select(:melee_attribute, Unit.melee_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :pistol_attribute, class: "form-label" %>
+    <%= form.select(:pistol_attribute, Unit.pistol_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :rifle_attribute, class: "form-label" %>
+    <%= form.select(:rifle_attribute, Unit.rifle_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :heavy_weapon_attribute, class: "form-label" %>
+    <%= form.select(:heavy_weapon_attribute, Unit.heavy_weapon_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :search_attribute, class: "form-label" %>
+    <%= form.select(:search_attribute, Unit.search_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :search_range, class: "form-label" %>
+    <%= form.select(:search_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :battle_cry_attribute, class: "form-label" %>
+    <%= form.select(:battle_cry_attribute, Unit.battle_cry_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :battle_cry_range, class: "form-label" %>
+    <%= form.select(:battle_cry_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :presence_attribute, class: "form-label" %>
+    <%= form.select(:presence_attribute, Unit.presence_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :presence_range, class: "form-label" %>
+    <%= form.select(:presence_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :lockpick_attribute, class: "form-label" %>
+    <%= form.select(:lockpick_attribute, Unit.lockpick_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :computers_attribute, class: "form-label" %>
+    <%= form.select(:computers_attribute, Unit.computers_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :throw_attribute, class: "form-label" %>
+    <%= form.select(:throw_attribute, Unit.throw_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :throw_range, class: "form-label" %>
+    <%= form.select(:throw_range, range_options, { include_blank: true}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :health_attribute, class: "form-label" %>
+    <%= form.select(:health_attribute, Unit.health_attributes.keys, {}, { class: "form-select" }) %>
+  </div>
+
+  <div class="col-md-2">
     <%= form.label :physical_armor, class: "form-label" %>
     <%= form.number_field :physical_armor, class: "form-control", min: 0, max: 10 %>
   </div>
@@ -102,28 +177,8 @@
   </div>
 
   <div class="col-md-2">
-    <%= form.label :throw_range, class: "form-label" %>
-    <%= form.select(:throw_range, range_options, { include_blank: true}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :presence_range, class: "form-label" %>
-    <%= form.select(:presence_range, range_options, { include_blank: true}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
     <%= form.label :awareness_range, class: "form-label" %>
     <%= form.select(:awareness_range, range_options, { include_blank: true}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :battle_cry_range, class: "form-label" %>
-    <%= form.select(:battle_cry_range, range_options, { include_blank: true}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :search_range, class: "form-label" %>
-    <%= form.select(:search_range, range_options, { include_blank: true}, { class: "form-select" }) %>
   </div>
 
   <%= form.submit class: "btn btn-primary" %>

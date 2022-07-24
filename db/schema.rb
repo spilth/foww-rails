@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_22_215517) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_23_125111) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -74,6 +74,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_22_215517) do
     t.integer "awareness_range"
     t.integer "battle_cry_range"
     t.integer "search_range"
+    t.integer "melee_attribute"
+    t.integer "pistol_attribute"
+    t.integer "rifle_attribute"
+    t.integer "heavy_weapon_attribute"
+    t.integer "search_attribute"
+    t.integer "battle_cry_attribute"
+    t.integer "presence_attribute"
+    t.integer "lockpick_attribute"
+    t.integer "computers_attribute"
+    t.integer "throw_attribute"
+    t.integer "health_attribute"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
