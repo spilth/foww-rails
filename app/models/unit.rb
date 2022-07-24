@@ -31,7 +31,6 @@
 #  radiation_immunity          :boolean
 #  rifle_attribute             :integer
 #  search_attribute            :integer
-#  search_range                :integer
 #  strength                    :integer
 #  throw_attribute             :integer
 #  throw_range                 :integer

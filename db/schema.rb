@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_23_125111) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_24_134230) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -73,7 +73,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_23_125111) do
     t.integer "presence_range"
     t.integer "awareness_range"
     t.integer "battle_cry_range"
-    t.integer "search_range"
     t.integer "melee_attribute"
     t.integer "pistol_attribute"
     t.integer "rifle_attribute"

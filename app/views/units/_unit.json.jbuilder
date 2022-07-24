@@ -20,5 +20,4 @@ json.extract! unit,
   :throw_range,
   :presence_range,
   :awareness_range,
-  :battle_cry_range,
-  :search_range
+  :battle_cry_range
