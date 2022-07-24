@@ -176,5 +176,50 @@
     <%= form.select(:awareness_range, range_options, { include_blank: true}, { class: "form-select" }) %>
   </div>
 
+  <div class="col-md-2">
+    <%= form.label :prepare_quick_actions, class: "form-label" %>
+    <%= form.number_field :prepare_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :movement_quick_actions, class: "form-label" %>
+    <%= form.number_field :movement_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :attack_quick_actions, class: "form-label" %>
+    <%= form.number_field :attack_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :melee_quick_actions, class: "form-label" %>
+    <%= form.number_field :melee_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :pistol_quick_actions, class: "form-label" %>
+    <%= form.number_field :pistol_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :rifle_quick_actions, class: "form-label" %>
+    <%= form.number_field :rifle_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :heavy_weapon_quick_actions, class: "form-label" %>
+    <%= form.number_field :heavy_weapon_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :target_quick_actions, class: "form-label" %>
+    <%= form.number_field :target_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
+  <div class="col-md-2">
+    <%= form.label :use_expertise_quick_actions, class: "form-label" %>
+    <%= form.number_field :use_expertise_quick_actions, class: "form-control", min: 0, max: 2 %>
+  </div>
+
   <%= form.submit class: "btn btn-primary" %>
 <% end %>

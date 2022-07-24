@@ -99,7 +99,16 @@ class UnitsController < ApplicationController
       :lockpick_attribute,
       :computers_attribute,
       :throw_attribute,
-      :health_attribute
+      :health_attribute,
+      :movement_quick_actions,
+      :attack_quick_actions,
+      :melee_quick_actions,
+      :pistol_quick_actions,
+      :rifle_quick_actions,
+      :heavy_weapon_quick_actions,
+      :target_quick_actions,
+      :use_expertise_quick_actions,
+      :prepare_quick_actions
     )
   end
 end
