@@ -2,49 +2,47 @@
 
 <h1>Units</h1>
 
-<div id="units">
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th><i class="fa-solid fa-play"></i></th>
-      <th><i class="fa-solid fa-forward"></i></th>
-      <th>S</th>
-      <th>P</th>
-      <th>E</th>
-      <th>C</th>
-      <th>I</th>
-      <th>A</th>
-      <th>L</th>
-      <th><i class="fa-solid fa-shield-halved"></i></th>
-      <th><i class="fa-solid fa-bolt-lightning"></i></th>
-      <th><i class="fa-solid fa-radiation"></i></th>
-    </tr>
-    </thead>
-    <tbody>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th><i class="fa-solid fa-play"></i></th>
+    <th><i class="fa-solid fa-forward"></i></th>
+    <th>S</th>
+    <th>P</th>
+    <th>E</th>
+    <th>C</th>
+    <th>I</th>
+    <th>A</th>
+    <th>L</th>
+    <th><i class="fa-solid fa-shield-halved"></i></th>
+    <th><i class="fa-solid fa-bolt-lightning"></i></th>
+    <th><i class="fa-solid fa-radiation"></i></th>
+  </tr>
+  </thead>
+  <tbody>
 
   <% @units.each do |unit| %>
-  <tr>
-    <td><%= link_to unit.name, unit %></td>
-    <td><%= move_icon(unit.move_range) %></td>
-    <td><%= charge_icon(unit.charge_range) %></td>
-    <td><%= unit.strength %></td>
-    <td><%= unit.perception %></td>
-    <td><%= unit.endurance %></td>
-    <td><%= unit.charisma %></td>
-    <td><%= unit.intelligence %></td>
-    <td><%= unit.agility %></td>
-    <td><%= unit.luck %></td>
-    <td><%= unit.physical_armor %><%= "+#{unit.physical_strong_armor_bonus}" if unit.physical_strong_armor_bonus %></td>
-    <td><%= unit.energy_armor %><%= "+#{unit.energy_strong_armor_bonus}" if unit.energy_strong_armor_bonus %></td>
-    <td>
-      <%= "X" if unit.radiation_immunity %>
-      <%= unit.radiation_armor if !unit.radiation_immunity %>
-    </td>
-  </tr>
+    <tr>
+      <td><%= link_to unit.name, unit %></td>
+      <td><%= move_icon(unit.move_range) %></td>
+      <td><%= charge_icon(unit.charge_range) %></td>
+      <td><%= unit.strength %></td>
+      <td><%= unit.perception %></td>
+      <td><%= unit.endurance %></td>
+      <td><%= unit.charisma %></td>
+      <td><%= unit.intelligence %></td>
+      <td><%= unit.agility %></td>
+      <td><%= unit.luck %></td>
+      <td><%= unit.physical_armor %><%= "+#{unit.physical_strong_armor_bonus}" if unit.physical_strong_armor_bonus %></td>
+      <td><%= unit.energy_armor %><%= "+#{unit.energy_strong_armor_bonus}" if unit.energy_strong_armor_bonus %></td>
+      <td>
+        <%= "X" if unit.radiation_immunity %>
+        <%= unit.radiation_armor if !unit.radiation_immunity %>
+      </td>
+    </tr>
   <% end %>
-    </tbody>
-  </table>
-</div>
+  </tbody>
+</table>
 
 <%= link_to "New unit", new_unit_path, class: "btn btn-primary" %>
