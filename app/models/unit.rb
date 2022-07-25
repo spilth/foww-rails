@@ -61,12 +61,12 @@ class Unit < ApplicationRecord
   }
 
   RANGES = {
-    2 => "Orange",
-    4 => "Yellow",
-    6 => "Red",
-    8 => "Green",
-    10 => "Blue",
-    12 => "Black"
+    2 => :orange,
+    4 => :yellow,
+    6 => :red,
+    8 => :green,
+    10 => :blue,
+    12 => :black
   }
 
   validates :wave, presence: true

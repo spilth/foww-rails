@@ -2,7 +2,7 @@ module UnitsHelper
   include ActiveSupport::Inflector
 
   def range_options
-    Unit::RANGES.collect { |inches, color| ["#{inches} - #{color}", inches] }
+    Unit::RANGES.collect { |inches, color| ["#{inches} - #{titleize(color)}", inches] }
   end
 
   def attribute_options
@@ -10,15 +10,11 @@ module UnitsHelper
   end
 
   def move_icon(distance)
-    tag.span(class: "distance distance-#{distance}") do
-      tag.i(class: "fa-fw fa-solid fa-play distance-#{distance}")
-    end
+    image_tag("#{Unit::RANGES[distance]}_move.svg", width: 28, height: 28)
   end
 
   def charge_icon(distance)
-    tag.span(class: "distance distance-#{distance}") do
-      tag.i(class: "fa-fw fa-solid fa-forward")
-    end
+    image_tag("#{Unit::RANGES[distance]}_charge.svg", width: 28, height: 28)
   end
 
   def skill_icons(unit, attribute)
