@@ -43,7 +43,7 @@ module UnitsHelper
     icons << heavy_weapon_icon * unit.heavy_weapon_quick_actions.to_i
     icons << target_icon * unit.target_quick_actions.to_i
     icons << use_expertise_icon * unit.use_expertise_quick_actions.to_i
-    icons << awareness_icon * unit.prepare_quick_actions.to_i
+    icons << quick_action_prepare * unit.prepare_quick_actions.to_i
     icons.join(" ").html_safe
   end
 
@@ -99,6 +99,10 @@ module UnitsHelper
 
   def search_icon
     image_tag("skill_search.svg", width: 28, height: 28)
+  end
+
+  def quick_action_prepare
+    image_tag("quick_action_prepare.svg", width: 28, height: 28)
   end
 
   def heavy_weapon_icon
