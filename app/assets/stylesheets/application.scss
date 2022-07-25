@@ -11,3 +11,13 @@ $range-6-fg: #000000;
 $range-8-fg: #000000;
 $range-10-fg: #000000;
 $range-12-fg: #ffffff;
+
+@font-face {
+  font-family: ReviolaScriptRegular;
+  src: url("reviola-script.regular.otf");
+}
+
+h1 {
+  font-family: ReviolaScriptRegular;
+  text-transform: uppercase;
+}
