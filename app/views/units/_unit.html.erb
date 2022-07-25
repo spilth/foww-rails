@@ -85,13 +85,12 @@
   </p>
 
   <p>
-    <strong>Awareness Range:</strong>
-    <%= unit.awareness_range %>
+    <strong>Battle Cry Range:</strong>
+    <%= unit.battle_cry_range %>
   </p>
 
   <p>
-    <strong>Battle Cry Range:</strong>
-    <%= unit.battle_cry_range %>
+    <%= awareness_range(unit.awareness_range) if unit.awareness_range %>
   </p>
 
   <p>

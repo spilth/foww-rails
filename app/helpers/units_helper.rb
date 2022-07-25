@@ -54,23 +54,27 @@ module UnitsHelper
   end
 
   def use_expertise_icon
-    tag.i(class: "fa-fw fa-solid fa-atom", title: "Health")
+    tag.i(class: "fa-fw fa-solid fa-atom", title: "Use Expertise")
   end
 
   def attack_icon
-    tag.i(class: "fa-fw fa-solid fa-burst", title: "Health")
+    tag.i(class: "fa-fw fa-solid fa-burst", title: "Attack")
   end
 
   def movement_icon
-    tag.i(class: "fa-fw fa-solid fa-forward-step", title: "Health")
+    tag.i(class: "fa-fw fa-solid fa-forward-step", title: "Movement")
+  end
+
+  def awareness_range(range)
+    image_tag("#{Unit::RANGES[range]}_awareness.svg", width: 28, height: 28)
   end
 
   def awareness_icon
-    tag.i(class: "fa-fw fa-solid fa-eye", title: "Health")
+    tag.i(class: "fa-fw fa-solid fa-eye", title: "Awareness")
   end
 
   def target_icon
-    tag.i(class: "fa-fw fa-solid fa-crosshairs", title: "Health")
+    tag.i(class: "fa-fw fa-solid fa-crosshairs", title: "Target")
   end
 
   def throw_icon
@@ -94,7 +98,7 @@ module UnitsHelper
   end
 
   def search_icon
-    tag.i(class: "fa-fw fa-solid fa-magnifying-glass", title: "Search")
+    image_tag("skill_search.svg", width: 28, height: 28)
   end
 
   def heavy_weapon_icon
