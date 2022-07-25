@@ -25,7 +25,7 @@ module UnitsHelper
     icons << heavy_weapon_icon if unit.heavy_weapon_attribute == attribute
     icons << search_icon if unit.search_attribute == attribute
     icons << battle_cry_icon if unit.battle_cry_attribute == attribute
-    icons << presence_icon if unit.presence_attribute == attribute
+    icons << presence_range(unit.presence_range) if unit.presence_attribute == attribute
     icons << lockpick_icon if unit.lockpick_attribute == attribute
     icons << computers_icon if unit.computers_attribute == attribute
     icons << throw_icon if unit.throw_attribute == attribute
@@ -67,6 +67,10 @@ module UnitsHelper
 
   def awareness_range(range)
     image_tag("#{Unit::RANGES[range]}_awareness.svg", width: 28, height: 28)
+  end
+
+  def presence_range(range)
+    image_tag("#{Unit::RANGES[range]}_presence.svg", width: 28, height: 28)
   end
 
   def awareness_icon
