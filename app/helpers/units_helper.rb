@@ -32,7 +32,7 @@ module UnitsHelper
     icons << health_icon if unit.health_attribute == attribute
     icons.join(" ").html_safe
   end
-  
+
   def quick_action_icons(unit)
     icons = []
     icons << movement_icon * unit.movement_quick_actions.to_i
