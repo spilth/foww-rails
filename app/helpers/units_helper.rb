@@ -82,7 +82,7 @@ module UnitsHelper
   end
 
   def computers_icon
-    tag.i(class: "fa-fw fa-solid fa-desktop", title: "Computers")
+    image_tag("skill_computer.svg", width: 28, height: 28)
   end
 
   def lockpick_icon
