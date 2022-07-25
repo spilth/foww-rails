@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <polygon points="64 64 128 128 64 192" fill="black" />
+  <polygon points="128 64 192 128 128 192" fill="black" />
+</svg>
