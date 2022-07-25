@@ -86,7 +86,7 @@ module UnitsHelper
   end
 
   def lockpick_icon
-    tag.i(class: "fa-fw fa-solid fa-unlock-keyhole", title: "Lockpick")
+    image_tag("skill_lockpick.svg", width: 28, height: 28)
   end
 
   def presence_icon
