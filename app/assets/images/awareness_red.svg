@@ -1,0 +1,13 @@
+<svg viewBox="0 0 256 256" width="100%" height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+<rect x="128" y="0" width="128" height="128"/>
+<rect x="128" y="128" width="128" height="128"/>
+<circle cx="128" cy="128" r="124" fill="#E73430" stroke="black" stroke-width="8"/>
+<ellipse cx="128" cy="128" rx="108" ry="60" fill="black"/>
+<circle cx="128" cy="128" r="44" fill="#E73430"/>
+<circle cx="128" cy="128" r="12" fill="black"/>
+
+</svg>

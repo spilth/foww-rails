@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <circle cx="128" cy="128" r="124" fill="white" stroke="black" stroke-width="8"/>
+<svg viewBox="0 0 256 256" width="100%" height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <rect x="56" y="48" width="144" height="104" fill="white" stroke="black" stroke-width="12" />
-  <rect x="54" y="168" width="148" height="40" fill="white" stroke="black" stroke-width="8" />
-  <rect x="62" y="176" width="132" height="32" fill="black" />
-  <path d="M 72 48 C 56 48, 56 152, 72 152" fill="none" stroke="black" stroke-width="8" />
-  <path d="M 184 48 C 200 48, 200 152, 184 152" fill="none" stroke="black" stroke-width="8" />
-  <circle cx="196" cy="148" r="4" fill="white"/>
+
+<circle cx="128" cy="128" r="124" fill="white" stroke="black" stroke-width="8"/>
+<rect x="56" y="48" width="144" height="104" fill="white" stroke="black" stroke-width="12"/>
+<rect x="54" y="168" width="148" height="40" fill="white" stroke="black" stroke-width="8"/>
+<rect x="62" y="176" width="132" height="32" fill="black"/>
+<path d="M 72 48 C 56 48, 56 152, 72 152" fill="none" stroke="black" stroke-width="8"/>
+<path d="M 184 48 C 200 48, 200 152, 184 152" fill="none" stroke="black" stroke-width="8"/>
+<circle cx="196" cy="148" r="4" fill="white"/>
+
 </svg>

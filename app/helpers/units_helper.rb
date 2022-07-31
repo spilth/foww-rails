@@ -10,11 +10,11 @@ module UnitsHelper
   end
 
   def move_icon(distance)
-    image_tag("#{Unit::RANGES[distance]}_move.svg", width: 28, height: 28)
+    image_tag("move_#{Unit::RANGES[distance]}.svg", width: 28, height: 28)
   end
 
   def charge_icon(distance)
-    image_tag("#{Unit::RANGES[distance]}_charge.svg", width: 28, height: 28)
+    image_tag("charge_#{Unit::RANGES[distance]}.svg", width: 28, height: 28)
   end
 
   def skill_icons(unit, attribute)
@@ -35,14 +35,14 @@ module UnitsHelper
 
   def quick_action_icons(unit)
     icons = []
-    icons << movement_icon * unit.movement_quick_actions.to_i
-    icons << attack_icon * unit.attack_quick_actions.to_i
+    icons << quick_action_movement * unit.movement_quick_actions.to_i
+    icons << quick_action_attack * unit.attack_quick_actions.to_i
     icons << melee_icon * unit.melee_quick_actions.to_i
     icons << pistol_icon * unit.pistol_quick_actions.to_i
     icons << rifle_icon * unit.rifle_quick_actions.to_i
     icons << heavy_weapon_icon * unit.heavy_weapon_quick_actions.to_i
     icons << target_icon * unit.target_quick_actions.to_i
-    icons << use_expertise_icon * unit.use_expertise_quick_actions.to_i
+    icons << quick_action_expertise * unit.use_expertise_quick_actions.to_i
     icons << quick_action_prepare * unit.prepare_quick_actions.to_i
     icons.join(" ").html_safe
   end
@@ -57,20 +57,12 @@ module UnitsHelper
     tag.i(class: "fa-fw fa-solid fa-atom", title: "Use Expertise")
   end
 
-  def attack_icon
-    tag.i(class: "fa-fw fa-solid fa-burst", title: "Attack")
-  end
-
-  def movement_icon
-    tag.i(class: "fa-fw fa-solid fa-forward-step", title: "Movement")
-  end
-
   def awareness_range(range)
-    image_tag("#{Unit::RANGES[range]}_awareness.svg", width: 28, height: 28)
+    image_tag("awareness_#{Unit::RANGES[range]}.svg", width: 28, height: 28)
   end
 
   def presence_range(range)
-    image_tag("#{Unit::RANGES[range]}_presence.svg", width: 28, height: 28)
+    image_tag("presence_#{Unit::RANGES[range]}.svg", width: 28, height: 28)
   end
 
   def awareness_icon
@@ -105,12 +97,24 @@ module UnitsHelper
     image_tag("skill_search.svg", width: 28, height: 28)
   end
 
+  def quick_action_movement
+    image_tag("quick_action_movement.svg", width: 28, height: 28)
+  end
+
+  def quick_action_attack
+    image_tag("quick_action_attack.svg", width: 28, height: 28)
+  end
+
+  def quick_action_expertise
+    image_tag("quick_action_expertise.svg", width: 28, height: 28)
+  end
+
   def quick_action_prepare
     image_tag("quick_action_prepare.svg", width: 28, height: 28)
   end
 
   def heavy_weapon_icon
-    tag.i(class: "fa-fw fa-solid fa-rocket", title: "Heavy Weapon")
+    image_tag("skill_heavy_weapon.svg", width: 28, height: 28)
   end
 
   def rifle_icon

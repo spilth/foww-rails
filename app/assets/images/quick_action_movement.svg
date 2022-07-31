@@ -8,10 +8,13 @@
 <line x1="36" y1="36" x2="220" y2="220" stroke="black" stroke-width="48"/>
 <line x1="36" y1="220" x2="220" y2="36" stroke="black" stroke-width="48"/>
 <circle cx="128" cy="128" r="104" fill="white" stroke="black" stroke-width="8"/>
-<g transform="scale(0.8) translate(32,32)">
-<ellipse cx="128" cy="128" rx="108" ry="60" fill="black"/>
-<circle cx="128" cy="128" r="44" fill="white"/>
-<circle cx="128" cy="128" r="12" fill="black"/>
+<line x1="128" y1="0" x2="128" y2="256" stroke="black" stroke-width="8"/>
+<g transform="scale(0.5) translate(32,128)">
+<polygon points="96 64 160 128 96 192" fill="black"/>
+</g>
+<g transform="scale(0.5) translate(224,128)">
+<polygon points="64 64 128 128 64 192" fill="black"/>
+<polygon points="128 64 192 128 128 192" fill="black"/>
 </g>
 
 </svg>
