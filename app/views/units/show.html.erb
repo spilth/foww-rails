@@ -2,7 +2,19 @@
 
 <h1><%= @unit.name %></h1>
 
-<%= render @unit %>
+<div class="row">
+  <div class="col-8">
+    <%= render @unit %>
+  </div>
+  <div class="col-4">
+    <h2>Models</h2>
+
+    <% @unit.models.each do |model| %>
+      <%= link_to image_tag(model.image.variant(resize_to_limit: [256, 256]), class: "img"), model %>
+    <% end %>
+  </div>
+</div>
+
 
 <div>
   <%= link_to "Edit this unit", edit_unit_path(@unit), class: "btn btn-warning" %>

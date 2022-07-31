@@ -69,6 +69,8 @@ class Unit < ApplicationRecord
     12 => :black
   }
 
+  has_and_belongs_to_many :models
+
   validates :wave, presence: true
   validates :name, presence: true
   validates :move_range, presence: true

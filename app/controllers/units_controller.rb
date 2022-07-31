@@ -108,7 +108,8 @@ class UnitsController < ApplicationController
       :heavy_weapon_quick_actions,
       :target_quick_actions,
       :use_expertise_quick_actions,
-      :prepare_quick_actions
+      :prepare_quick_actions,
+      model_ids: []
     )
   end
 end

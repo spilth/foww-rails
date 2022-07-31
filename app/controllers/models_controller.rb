@@ -66,6 +66,6 @@ class ModelsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def model_params
-    params.require(:model).permit(:name, :image)
+    params.require(:model).permit(:name, :image, unit_ids: [])
   end
 end

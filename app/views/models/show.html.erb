@@ -2,6 +2,14 @@
 
 <%= render @model %>
 
+<h2>Units</h2>
+
+<ul>
+  <% @model.units.each do |unit| %>
+    <li><%= link_to unit.name, unit %></li>
+  <% end %>
+</ul>
+
 <div>
   <%= link_to "Edit this model", edit_model_path(@model), class: "btn btn-warning" %> <%= button_to "Destroy this model", @model, method: :delete, class: "btn btn-danger" %>
 </div>
