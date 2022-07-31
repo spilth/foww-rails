@@ -1,6 +1,32 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @product %>
+<h1>Product: <%= @product.name %></h1>
 
-  <%= link_to "Edit this product", edit_product_path(@product), class: "btn btn-warning" %>
-  <%= button_to "Destroy this product", @product, method: :delete, class: "btn btn-danger" %>
+<div class="row">
+  <div class="col-md-8">
+    <%= render @product %>
+  </div>
+  <div class="col-md-4">
+    <h2>Additional Data</h2>
+
+    <% if @product.models.present? %>
+      <h3>Models</h3>
+
+      <p><%= @product.name %> includes the following models:</p>
+
+      <% @product.models.order(:name).each do |model| %>
+        <figure class="figure">
+          <%= link_to image_tag(model.image.variant(resize_to_limit: [128, 128]), class: "figure-img img-fluid rounded"), model %>
+
+          <figcaption class="figure-caption"><%= link_to model.name, model %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+
+    <h2>Actions</h2>
+
+    <%= link_to "Edit this product", edit_product_path(@product), class: "btn btn-warning" %>
+    <%= button_to "Destroy this product", @product, method: :delete, class: "btn btn-danger" %>
+  </div>
+</div>
+

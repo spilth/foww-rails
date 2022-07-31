@@ -21,5 +21,10 @@
     <%= form.file_field :image, class: "form-control" %>
   </div>
 
+  <div class="col-md-4">
+    <%= form.label :models, class: "form-label" %>
+    <%= form.collection_select(:model_ids, Model.all.order(:name), :id, :name, {}, { :multiple => true, class: "form-select" }) %>
+  </div>
+
   <%= form.submit class: "btn btn-primary" %>
 <% end %>

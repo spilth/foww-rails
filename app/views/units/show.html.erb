@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1><%= @unit.name %></h1>
+<h1>Unit: <%= @unit.name %></h1>
 
 <div class="row">
   <div class="col-md-8">
@@ -15,16 +15,38 @@
       <%= @unit.wave %>
     </p>
 
-    <h3>Models</h3>
+    <% if @unit.models.present? %>
+      <h3>Models</h3>
 
-    <% @unit.models.each do |model| %>
-      <%= link_to image_tag(model.image.variant(resize_to_limit: [256, 256]), class: "img"), model %>
+      <p>This units can be represented by the following models:</p>
+
+      <% @unit.models.each do |model| %>
+        <figure class="figure">
+          <%= link_to image_tag(model.image.variant(resize_to_limit: [128, 128]), class: "figure-img img-fluid rounded"), model %>
+
+          <figcaption class="figure-caption"><%= link_to model.name, model %></figcaption>
+        </figure>
+      <% end %>
     <% end %>
+
+    <% if @unit.products.present? %>
+      <h3 class="mt-4">Products</h3>
+
+      <p>The models that represent this unit can found in the following products:</p>
+
+      <% @unit.products.each do |product| %>
+        <figure class="figure">
+          <%= link_to image_tag(product.image.variant(resize_to_limit: [256, 256]), class: "figure-img img-fluid rounded"), product %>
+
+          <figcaption class="figure-caption"><%= link_to product.name, product %></figcaption>
+        </figure>
+      <% end %>
+    <% end %>
+
+    <h2>Actions</h2>
+
+    <%= link_to "Edit this unit", edit_unit_path(@unit), class: "btn btn-warning" %>
+    <%= button_to "Destroy this unit", @unit, method: :delete, class: "btn btn-danger" %>
+
   </div>
-</div>
-
-
-<div>
-  <%= link_to "Edit this unit", edit_unit_path(@unit), class: "btn btn-warning" %>
-  <%= button_to "Destroy this unit", @unit, method: :delete, class: "btn btn-danger" %>
 </div>

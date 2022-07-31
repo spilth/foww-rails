@@ -1,19 +1,41 @@
 <p style="color: green"><%= notice %></p>
 
+<h1>Model: <%= @model.name %></h1>
+
 <div class="row">
   <div class="col-md-8">
     <%= render @model %>
   </div>
   <div class="col-md-4">
-    <h2>Units</h2>
+    <h2>Additional Data</h2>
 
-    <p>The following Units make use of this model:</p>
+    <% if @model.units.present? %>
+      <h3>Units</h3>
 
-    <ul>
-      <% @model.units.each do |unit| %>
-        <li><%= link_to unit.name, unit %></li>
-      <% end %>
-    </ul>
+      <p>The following Units make use of this model:</p>
+
+      <ul>
+        <% @model.units.order(:name).each do |unit| %>
+          <li><%= link_to unit.name, unit %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <% if @model.products.present? %>
+      <h3>Products</h3>
+
+      <p>The following Products include this Model:</p>
+
+      <ul>
+        <% @model.products.order(:name).each do |product| %>
+          <figure class="figure">
+            <%= link_to image_tag(product.image.variant(resize_to_limit: [256, 256]), class: "figure-img img-fluid rounded"), product %>
+
+            <figcaption class="figure-caption"><%= link_to product.name, product %></figcaption>
+          </figure>
+        <% end %>
+      </ul>
+    <% end %>
 
     <h2>Actions</h2>
 
