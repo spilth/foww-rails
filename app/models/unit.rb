@@ -50,23 +50,23 @@
 #
 class Unit < ApplicationRecord
   ATTRIBUTES = {
-    0 => :none,
-    1 => :strength,
-    2 => :perception,
-    3 => :endurance,
-    4 => :charisma,
-    5 => :intelligence,
-    6 => :agility,
-    7 => :luck
+    none: 0,
+    strength: 1,
+    perception: 2,
+    endurance: 3,
+    charisma: 4,
+    intelligence: 5,
+    agility: 6,
+    luck: 7
   }
 
   RANGES = {
-    2 => :orange,
-    4 => :yellow,
-    6 => :red,
-    8 => :green,
-    10 => :blue,
-    12 => :black
+    orange: 2,
+    yellow: 4,
+    red: 6,
+    green: 8,
+    blue: 10,
+    black: 12
   }
 
   has_and_belongs_to_many :models
@@ -83,15 +83,22 @@ class Unit < ApplicationRecord
   validates :agility, presence: true
   validates :luck, presence: true
 
-  enum :melee_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :pistol_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :rifle_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :heavy_weapon_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :search_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :battle_cry_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :presence_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :lockpick_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :computers_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :throw_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
-  enum :health_attribute, ATTRIBUTES.invert, suffix: true, scopes: false, default: :none
+  enum :move_range, RANGES, suffix: true, scopes: false, default: :none
+  enum :charge_range, RANGES, suffix: true, scopes: false, default: :none
+  enum :awareness_range, RANGES, suffix: true, scopes: false, default: :none
+  enum :presence_range, RANGES, suffix: true, scopes: false, default: :none
+  enum :battle_cry_range, RANGES, suffix: true, scopes: false, default: :none
+  enum :throw_range, RANGES, suffix: true, scopes: false, default: :none
+
+  enum :melee_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :pistol_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :rifle_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :heavy_weapon_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :search_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :battle_cry_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :presence_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :lockpick_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :computers_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :throw_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
+  enum :health_attribute, ATTRIBUTES, suffix: true, scopes: false, default: :none
 end

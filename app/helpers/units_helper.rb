@@ -2,19 +2,19 @@ module UnitsHelper
   include ActiveSupport::Inflector
 
   def range_options
-    Unit::RANGES.collect { |inches, color| ["#{inches} - #{titleize(color)}", inches] }
+    Unit::RANGES.collect { |color, inches| ["#{titleize(color)} (#{inches})", color] }
   end
 
   def attribute_options
-    Unit::ATTRIBUTES.collect { |index, attribute| [titleize(attribute), index] }
+    Unit::ATTRIBUTES.collect { |attribute, _index| [titleize(attribute), attribute] }
   end
 
   def move_icon(distance)
-    image_tag("move_#{Unit::RANGES[distance]}.svg", width: 28, height: 28)
+    image_tag("move_#{distance}.svg", width: 28, height: 28)
   end
 
   def charge_icon(distance)
-    image_tag("charge_#{Unit::RANGES[distance]}.svg", width: 28, height: 28)
+    image_tag("charge_#{distance}.svg", width: 28, height: 28)
   end
 
   def skill_icons(unit, attribute)
@@ -58,11 +58,11 @@ module UnitsHelper
   end
 
   def awareness_range(range)
-    image_tag("awareness_#{Unit::RANGES[range]}.svg", width: 28, height: 28)
+    image_tag("awareness_#{range}.svg", width: 28, height: 28)
   end
 
   def presence_range(range)
-    image_tag("presence_#{Unit::RANGES[range]}.svg", width: 28, height: 28)
+    image_tag("presence_#{range}.svg", width: 28, height: 28)
   end
 
   def awareness_icon
