@@ -71,3 +71,4 @@ group :development do
 end
 
 gem "dartsass-rails", "~> 0.4.0"
+gem "google-cloud-storage"
