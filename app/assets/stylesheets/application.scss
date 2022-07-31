@@ -12,12 +12,18 @@ $range-8-fg: #000000;
 $range-10-fg: #000000;
 $range-12-fg: #ffffff;
 
-@font-face {
-  font-family: ReviolaScriptRegular;
-  src: url("reviola-script.regular.otf");
+body {
+  font-family: 'Jost', sans-serif;
 }
 
-h1, h2 {
-  font-family: ReviolaScriptRegular;
+h1 {
+  font-family: 'Permanent Marker', cursive;
   text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-family: 'Jost', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
 }

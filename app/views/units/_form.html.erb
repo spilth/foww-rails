@@ -1,4 +1,4 @@
-<%= form_with(model: unit, class: "row g-3") do |form| %>
+<%= form_with(model: unit) do |form| %>
   <% if unit.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
@@ -11,220 +11,255 @@
     </div>
   <% end %>
 
-  <div class="col-md-2">
-    <%= form.label :wave, class: "form-label" %>
-    <%= form.number_field :wave, class: "form-control", min: 1, max: 6 %>
+  <div class="row g-3 mb-4">
+    <div class="col-md-2">
+      <div class="form-check form-switch">
+        <%= form.check_box :unique, class: "form-check-input" %>
+        <%= form.label :unique, class: "form-check-label" %>
+      </div>
+    </div>
   </div>
 
-  <div class="col-md-2">
-    <%= form.label :unique, class: "form-label" %>
-    <%= form.check_box :unique, class: "form-control form-check-input" %>
+  <div class="row g-3 mb-4">
+    <div class="col-md-4">
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="col-md-2">
-    <%= form.label :move_range, class: "form-label" %>
-    <%= form.select(:move_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+  <h2>Movement</h2>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-2">
+      <%= form.label :move_range, class: "form-label" %>
+      <%= form.select(:move_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :charge_range, class: "form-label" %>
+      <%= form.select(:charge_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+    </div>
   </div>
 
-  <div class="col-md-2">
-    <%= form.label :charge_range, class: "form-label" %>
-    <%= form.select(:charge_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+  <h2>S.P.E.C.I.A.L.</h2>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-2">
+      <%= form.label :strength, class: "form-label" %>
+      <%= form.number_field :strength, class: "form-control", min: 1, max: 20 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :perception, class: "form-label" %>
+      <%= form.number_field :perception, class: "form-control", min: 1, max: 20 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :endurance, class: "form-label" %>
+      <%= form.number_field :endurance, class: "form-control", min: 1, max: 20 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :charisma, class: "form-label" %>
+      <%= form.number_field :charisma, class: "form-control", min: 1, max: 20 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :intelligence, class: "form-label" %>
+      <%= form.number_field :intelligence, class: "form-control", min: 1, max: 20 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :agility, class: "form-label" %>
+      <%= form.number_field :agility, class: "form-control", min: 1, max: 20 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :luck, class: "form-label" %>
+      <%= form.number_field :luck, class: "form-control", min: 1, max: 20 %>
+    </div>
   </div>
 
-  <div class="col-md-4">
-    <%= form.label :name, class: "form-label" %>
-    <%= form.text_field :name, class: "form-control" %>
+  <h2>Skill Attributes</h2>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-2">
+      <%= form.label :melee_attribute, "Melee", class: "form-label" %>
+      <%= form.select(:melee_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :pistol_attribute, "Pistol", class: "form-label" %>
+      <%= form.select(:pistol_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :rifle_attribute, "Rifle", class: "form-label" %>
+      <%= form.select(:rifle_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :heavy_weapon_attribute, "Heavy Weapon", class: "form-label" %>
+      <%= form.select(:heavy_weapon_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :search_attribute, "Search", class: "form-label" %>
+      <%= form.select(:search_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :battle_cry_attribute, "Battle Cry", class: "form-label" %>
+      <%= form.select(:battle_cry_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :battle_cry_range, "Battle Cry Range", class: "form-label" %>
+      <%= form.select(:battle_cry_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :presence_attribute, "Presence", class: "form-label" %>
+      <%= form.select(:presence_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :presence_range, "Presence Range", class: "form-label" %>
+      <%= form.select(:presence_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :lockpick_attribute, "Lockpick", class: "form-label" %>
+      <%= form.select(:lockpick_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :computers_attribute, "Computers", class: "form-label" %>
+      <%= form.select(:computers_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :throw_attribute, "Throw", class: "form-label" %>
+      <%= form.select(:throw_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :throw_range, "Throw Range", class: "form-label" %>
+      <%= form.select(:throw_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :health_attribute, "Health", class: "form-label" %>
+      <%= form.select(:health_attribute, attribute_options, {}, { class: "form-select" }) %>
+    </div>
   </div>
 
-  <div class="col-md-2">
-    <%= form.label :strength, class: "form-label" %>
-    <%= form.number_field :strength, class: "form-control", min: 1, max: 20 %>
+  <h2>Armor</h2>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-2">
+      <%= form.label :physical_armor, "Physical", class: "form-label" %>
+      <%= form.number_field :physical_armor, class: "form-control", min: 0, max: 10 %>
+    </div>
+
+    <div class="col-md-3">
+      <%= form.label :physical_strong_armor_bonus, class: "form-label" %>
+      <%= form.number_field :physical_strong_armor_bonus, class: "form-control", min: 1, max: 10 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :energy_armor, "Energy", class: "form-label" %>
+      <%= form.number_field :energy_armor, class: "form-control", min: 0, max: 10 %>
+    </div>
+
+    <div class="col-md-3">
+      <%= form.label :energy_strong_armor_bonus, class: "form-label" %>
+      <%= form.number_field :energy_strong_armor_bonus, class: "form-control", min: 1, max: 10 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :radiation_immunity, class: "form-label" %>
+      <%= form.check_box :radiation_immunity, class: "form-control form-check-input" %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :radiation_armor, "Radiation", class: "form-label" %>
+      <%= form.number_field :radiation_armor, class: "form-control", min: 0, max: 10 %>
+    </div>
   </div>
 
-  <div class="col-md-2">
-    <%= form.label :perception, class: "form-label" %>
-    <%= form.number_field :perception, class: "form-control", min: 1, max: 20 %>
+  <h2>Awareness</h2>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-2">
+      <%= form.label :awareness_range, class: "form-label" %>
+      <%= form.select(:awareness_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+    </div>
   </div>
 
-  <div class="col-md-2">
-    <%= form.label :endurance, class: "form-label" %>
-    <%= form.number_field :endurance, class: "form-control", min: 1, max: 20 %>
+  <h2>Quick Actions</h2>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-2">
+      <%= form.label :prepare_quick_actions, "Prepare", class: "form-label" %>
+      <%= form.number_field :prepare_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :movement_quick_actions, "Movement", class: "form-label" %>
+      <%= form.number_field :movement_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :attack_quick_actions, "Attack", class: "form-label" %>
+      <%= form.number_field :attack_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :melee_quick_actions, "Melee", class: "form-label" %>
+      <%= form.number_field :melee_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :pistol_quick_actions, "Pistol", class: "form-label" %>
+      <%= form.number_field :pistol_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :rifle_quick_actions, "Rifle", class: "form-label" %>
+      <%= form.number_field :rifle_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :heavy_weapon_quick_actions, "Heavy Weapon", class: "form-label" %>
+      <%= form.number_field :heavy_weapon_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :target_quick_actions, "Target", class: "form-label" %>
+      <%= form.number_field :target_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
+
+    <div class="col-md-2">
+      <%= form.label :use_expertise_quick_actions, "Use Expertise", class: "form-label" %>
+      <%= form.number_field :use_expertise_quick_actions, class: "form-control", min: 0, max: 2 %>
+    </div>
   </div>
 
-  <div class="col-md-2">
-    <%= form.label :charisma, class: "form-label" %>
-    <%= form.number_field :charisma, class: "form-control", min: 1, max: 20 %>
-  </div>
+  <h2>Additional Data </h2>
 
-  <div class="col-md-2">
-    <%= form.label :intelligence, class: "form-label" %>
-    <%= form.number_field :intelligence, class: "form-control", min: 1, max: 20 %>
-  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-md-2">
+      <%= form.label :wave, class: "form-label" %>
+      <%= form.number_field :wave, class: "form-control", min: 1, max: 6 %>
+    </div>
 
-  <div class="col-md-2">
-    <%= form.label :agility, class: "form-label" %>
-    <%= form.number_field :agility, class: "form-control", min: 1, max: 20 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :luck, class: "form-label" %>
-    <%= form.number_field :luck, class: "form-control", min: 1, max: 20 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :melee_attribute, class: "form-label" %>
-    <%= form.select(:melee_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :pistol_attribute, class: "form-label" %>
-    <%= form.select(:pistol_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :rifle_attribute, class: "form-label" %>
-    <%= form.select(:rifle_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :heavy_weapon_attribute, class: "form-label" %>
-    <%= form.select(:heavy_weapon_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :search_attribute, class: "form-label" %>
-    <%= form.select(:search_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :battle_cry_attribute, class: "form-label" %>
-    <%= form.select(:battle_cry_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :battle_cry_range, class: "form-label" %>
-    <%= form.select(:battle_cry_range, range_options, { include_blank: true }, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :presence_attribute, class: "form-label" %>
-    <%= form.select(:presence_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :presence_range, class: "form-label" %>
-    <%= form.select(:presence_range, range_options, { include_blank: true }, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :lockpick_attribute, class: "form-label" %>
-    <%= form.select(:lockpick_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :computers_attribute, class: "form-label" %>
-    <%= form.select(:computers_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :throw_attribute, class: "form-label" %>
-    <%= form.select(:throw_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :throw_range, class: "form-label" %>
-    <%= form.select(:throw_range, range_options, { include_blank: true }, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :health_attribute, class: "form-label" %>
-    <%= form.select(:health_attribute, attribute_options, {}, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :physical_armor, class: "form-label" %>
-    <%= form.number_field :physical_armor, class: "form-control", min: 0, max: 10 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :physical_strong_armor_bonus, class: "form-label" %>
-    <%= form.number_field :physical_strong_armor_bonus, class: "form-control", min: 1, max: 10 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :energy_armor, class: "form-label" %>
-    <%= form.number_field :energy_armor, class: "form-control", min: 0, max: 10 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :energy_strong_armor_bonus, class: "form-label" %>
-    <%= form.number_field :energy_strong_armor_bonus, class: "form-control", min: 1, max: 10 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :radiation_immunity, class: "form-label" %>
-    <%= form.check_box :radiation_immunity, class: "form-control form-check-input" %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :radiation_armor, class: "form-label" %>
-    <%= form.number_field :radiation_armor, class: "form-control", min: 0, max: 10 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :awareness_range, class: "form-label" %>
-    <%= form.select(:awareness_range, range_options, { include_blank: true }, { class: "form-select" }) %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :prepare_quick_actions, class: "form-label" %>
-    <%= form.number_field :prepare_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :movement_quick_actions, class: "form-label" %>
-    <%= form.number_field :movement_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :attack_quick_actions, class: "form-label" %>
-    <%= form.number_field :attack_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :melee_quick_actions, class: "form-label" %>
-    <%= form.number_field :melee_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :pistol_quick_actions, class: "form-label" %>
-    <%= form.number_field :pistol_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :rifle_quick_actions, class: "form-label" %>
-    <%= form.number_field :rifle_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :heavy_weapon_quick_actions, class: "form-label" %>
-    <%= form.number_field :heavy_weapon_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :target_quick_actions, class: "form-label" %>
-    <%= form.number_field :target_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-2">
-    <%= form.label :use_expertise_quick_actions, class: "form-label" %>
-    <%= form.number_field :use_expertise_quick_actions, class: "form-control", min: 0, max: 2 %>
-  </div>
-
-  <div class="col-md-4">
-    <%= form.label :models, class: "form-label" %>
-    <%= form.collection_select(:model_ids, Model.all.order(:name), :id, :name, {}, { :multiple => true, class: "form-select" }) %>
+    <div class="col-md-4">
+      <%= form.label :models, class: "form-label" %>
+      <%= form.collection_select(:model_ids, Model.all.order(:name), :id, :name, {}, { :multiple => true, class: "form-select" }) %>
+    </div>
   </div>
 
   <%= form.submit class: "btn btn-primary" %>
+
 <% end %>

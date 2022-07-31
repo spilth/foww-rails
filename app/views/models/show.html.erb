@@ -1,15 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @model %>
+<div class="row">
+  <div class="col-md-8">
+    <%= render @model %>
+  </div>
+  <div class="col-md-4">
+    <h2>Units</h2>
 
-<h2>Units</h2>
+    <p>The following Units make use of this model:</p>
 
-<ul>
-  <% @model.units.each do |unit| %>
-    <li><%= link_to unit.name, unit %></li>
-  <% end %>
-</ul>
+    <ul>
+      <% @model.units.each do |unit| %>
+        <li><%= link_to unit.name, unit %></li>
+      <% end %>
+    </ul>
 
-<div>
-  <%= link_to "Edit this model", edit_model_path(@model), class: "btn btn-warning" %> <%= button_to "Destroy this model", @model, method: :delete, class: "btn btn-danger" %>
+    <h2>Actions</h2>
+
+    <%= link_to "Edit this model", edit_model_path(@model), class: "btn btn-warning" %>
+    <%= button_to "Destroy this model", @model, method: :delete, class: "btn btn-danger" %>
+  </div>
 </div>
+
+
