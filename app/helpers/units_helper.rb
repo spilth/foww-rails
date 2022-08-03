@@ -1,12 +1,10 @@
 module UnitsHelper
-  include ActiveSupport::Inflector
-
   def range_options
-    Unit::RANGES.collect { |color, inches| ["#{titleize(color)} (#{inches})", color] }
+    Unit::RANGES.collect { |color, inches| ["#{color.to_s.titleize} (#{inches})", color] }
   end
 
   def attribute_options
-    Unit::ATTRIBUTES.collect { |attribute, _index| [titleize(attribute), attribute] }
+    Unit::ATTRIBUTES.collect { |attribute, _index| [attribute.to_s.titleize, attribute] }
   end
 
   def move_icon(distance)
