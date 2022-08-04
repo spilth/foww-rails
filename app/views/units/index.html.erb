@@ -2,49 +2,56 @@
 
 <h1>Units</h1>
 
-<table class="table table-borderless table-hover">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th><%= image_tag("move_black.svg", width: 28, height: 28) %></th>
-    <th><%= image_tag("charge_black.svg", width: 28, height: 28) %></th>
-    <th>S</th>
-    <th>P</th>
-    <th>E</th>
-    <th>C</th>
-    <th>I</th>
-    <th>A</th>
-    <th>L</th>
-    <th><i class="fa-solid fa-shield-halved"></i></th>
-    <th><i class="fa-solid fa-bolt-lightning"></i></th>
-    <th><i class="fa-solid fa-radiation"></i></th>
-    <th><%= image_tag("awareness_black.svg", width: 28, height: 28) %></th>
-  </tr>
-  </thead>
-  <tbody>
+<div class="row">
+  <div class="col-md-10">
+    <table class="table table-borderless table-hover">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th><%= image_tag("move_black.svg", width: 38, height: 32) %></th>
+        <th><%= image_tag("charge_black.svg", width: 38, height: 32) %></th>
+        <th>S</th>
+        <th>P</th>
+        <th>E</th>
+        <th>C</th>
+        <th>I</th>
+        <th>A</th>
+        <th>L</th>
+        <th><i class="fa-solid fa-shield-halved"></i></th>
+        <th><i class="fa-solid fa-bolt-lightning"></i></th>
+        <th><i class="fa-solid fa-radiation"></i></th>
+        <th><%= image_tag("awareness_black.svg", width: 38, height: 32) %></th>
+      </tr>
+      </thead>
+      <tbody>
 
-  <% @units.each do |unit| %>
-    <tr>
-      <td><%= link_to unit.name, unit %></td>
-      <td><%= move_icon(unit.move_range) %></td>
-      <td><%= charge_icon(unit.charge_range) %></td>
-      <td><%= unit.strength %></td>
-      <td><%= unit.perception %></td>
-      <td><%= unit.endurance %></td>
-      <td><%= unit.charisma %></td>
-      <td><%= unit.intelligence %></td>
-      <td><%= unit.agility %></td>
-      <td><%= unit.luck %></td>
-      <td><%= unit.physical_armor %><%= "+#{unit.physical_strong_armor_bonus}" if unit.physical_strong_armor_bonus %></td>
-      <td><%= unit.energy_armor %><%= "+#{unit.energy_strong_armor_bonus}" if unit.energy_strong_armor_bonus %></td>
-      <td>
-        <%= "X" if unit.radiation_immunity %>
-        <%= unit.radiation_armor if !unit.radiation_immunity %>
-      </td>
-      <td><%= awareness_range(unit.awareness_range) %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+      <% @units.each do |unit| %>
+        <tr>
+          <td><%= link_to unit.name, unit %></td>
+          <td><%= move_icon(unit.move_range) %></td>
+          <td><%= charge_icon(unit.charge_range) %></td>
+          <td><%= unit.strength %></td>
+          <td><%= unit.perception %></td>
+          <td><%= unit.endurance %></td>
+          <td><%= unit.charisma %></td>
+          <td><%= unit.intelligence %></td>
+          <td><%= unit.agility %></td>
+          <td><%= unit.luck %></td>
+          <td><%= unit.physical_armor %><%= "+#{unit.physical_strong_armor_bonus}" if unit.physical_strong_armor_bonus %></td>
+          <td><%= unit.energy_armor %><%= "+#{unit.energy_strong_armor_bonus}" if unit.energy_strong_armor_bonus %></td>
+          <td>
+            <%= "X" if unit.radiation_immunity %>
+            <%= unit.radiation_armor if !unit.radiation_immunity %>
+          </td>
+          <td><%= awareness_range(unit.awareness_range) %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "New unit", new_unit_path, class: "btn btn-primary" %>
+  </div>
+</div>
 
-<%= link_to "New unit", new_unit_path, class: "btn btn-primary" %>
+

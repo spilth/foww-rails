@@ -2,22 +2,29 @@
 
 <h1>Products</h1>
 
-<table class="table table-borderless table-hover">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Image</th>
-  </tr>
-  </thead>
+<div class="row">
+  <div class="col-md-10">
+    <table class="table table-borderless table-hover">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Image</th>
+      </tr>
+      </thead>
 
-  <tbody>
-  <% @products.each do |product| %>
-    <tr>
-      <td><%= link_to product.name, product %></td>
-      <td><%= link_to image_tag(product.image.variant(resize_to_limit: [256, 256])), product if product.image.attached? %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+      <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= link_to product.name, product %></td>
+          <td><%= link_to image_tag(product.image.variant(resize_to_limit: [256, 256])), product if product.image.attached? %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "New product", new_product_path, class: "btn btn-primary" %>
+  </div>
+</div>
 
-<%= link_to "New product", new_product_path, class: "btn btn-primary" %>
+
