@@ -23,12 +23,20 @@
 
   <div class="col-md-4">
     <%= form.label :units, class: "form-label" %>
-    <%= form.collection_select(:unit_ids, Unit.all.order(:name), :id, :name, {}, { :multiple => true, class: "form-select" }) %>
+    <%= form.collection_check_boxes(:unit_ids, Unit.all.order(:name), :id, :name, {}, {}) do |b| %>
+      <div class="form-check">
+        <%= b.label(class: "form-check-label") { b.check_box(class: "form-check-input") + b.text } %>
+      </div>
+    <% end %>
   </div>
 
   <div class="col-md-4">
     <%= form.label :products, class: "form-label" %>
-    <%= form.collection_select(:product_ids, Product.all.order(:name), :id, :name, {}, { :multiple => true, class: "form-select" }) %>
+    <%= form.collection_check_boxes(:product_ids, Product.all.order(:name), :id, :name, {}, {}) do |b| %>
+      <div class="form-check">
+        <%= b.label(class: "form-check-label") { b.check_box(class: "form-check-input") + b.text } %>
+      </div>
+    <% end %>
   </div>
 
   <%= form.submit class: "btn btn-primary" %>
