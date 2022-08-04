@@ -75,11 +75,6 @@
   </p>
 
   <p>
-    <strong>Presence Range:</strong>
-    <%= unit.presence_range %>
-  </p>
-
-  <p>
     <strong>Battle Cry Range:</strong>
     <%= unit.battle_cry_range %>
   </p>
@@ -88,4 +83,6 @@
     <%= awareness_range(unit.awareness_range) if unit.awareness_range %>
     <%= quick_action_icons(unit) %>
   </p>
+
+  <p>This Unit is from Wave <%= @unit.wave %>.</p>
 </div>

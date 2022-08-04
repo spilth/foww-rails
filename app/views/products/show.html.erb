@@ -7,10 +7,8 @@
     <%= render @product %>
   </div>
   <div class="col-md-4">
-    <h2>Additional Data</h2>
-
     <% if @product.models.present? %>
-      <h3>Models</h3>
+      <h2>Models</h2>
 
       <p><%= @product.name %> includes the following models:</p>
 

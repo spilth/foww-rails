@@ -8,11 +8,11 @@ module UnitsHelper
   end
 
   def move_icon(distance)
-    image_tag("move_#{distance}.svg", width: 28, height: 28)
+    image_tag("move_#{distance}.svg", width: 38, height: 32)
   end
 
   def charge_icon(distance)
-    image_tag("charge_#{distance}.svg", width: 28, height: 28)
+    image_tag("charge_#{distance}.svg", width: 38, height: 32)
   end
 
   def skill_icons(unit, attribute)
@@ -56,11 +56,11 @@ module UnitsHelper
   end
 
   def awareness_range(range)
-    image_tag("awareness_#{range}.svg", width: 28, height: 28)
+    image_tag("awareness_#{range}.svg", width: 38, height: 32)
   end
 
   def presence_range(range)
-    image_tag("presence_#{range}.svg", width: 28, height: 28)
+    image_tag("presence_#{range}.svg", width: 38, height: 32)
   end
 
   def awareness_icon
@@ -76,11 +76,11 @@ module UnitsHelper
   end
 
   def computers_icon
-    image_tag("skill_computer.svg", width: 28, height: 28)
+    image_tag("skill_computer.svg", width: 38, height: 32)
   end
 
   def lockpick_icon
-    image_tag("skill_lockpick.svg", width: 28, height: 28)
+    image_tag("skill_lockpick.svg", width: 38, height: 32)
   end
 
   def presence_icon
@@ -92,38 +92,38 @@ module UnitsHelper
   end
 
   def search_icon
-    image_tag("skill_search.svg", width: 28, height: 28)
+    image_tag("skill_search.svg", width: 38, height: 32)
   end
 
   def quick_action_movement
-    image_tag("quick_action_movement.svg", width: 28, height: 28)
+    image_tag("quick_action_movement.svg", width: 38, height: 32)
   end
 
   def quick_action_attack
-    image_tag("quick_action_attack.svg", width: 28, height: 28)
+    image_tag("quick_action_attack.svg", width: 38, height: 32)
   end
 
   def quick_action_expertise
-    image_tag("quick_action_expertise.svg", width: 28, height: 28)
+    image_tag("quick_action_expertise.svg", width: 38, height: 32)
   end
 
   def quick_action_prepare
-    image_tag("quick_action_prepare.svg", width: 28, height: 28)
+    image_tag("quick_action_prepare.svg", width: 38, height: 32)
   end
 
   def heavy_weapon_icon
-    image_tag("skill_heavy_weapon.svg", width: 28, height: 28)
+    image_tag("skill_heavy_weapon.svg", width: 38, height: 32)
   end
 
   def rifle_icon
-    tag.i(class: "fa-fw fa-solid fa-person-rifle", title: "Rifle")
+    image_tag("skill_rifle.svg", width: 38, height: 32)
   end
 
   def pistol_icon
-    tag.i(class: "fa-fw fa-solid fa-gun", title: "Pistol")
+    image_tag("skill_pistol.svg", width: 38, height: 32)
   end
 
   def melee_icon
-    tag.i(class: "fa-fw fa-solid fa-utensils", title: "Melee")
+    image_tag("skill_melee.svg", width: 38, height: 32)
   end
 end

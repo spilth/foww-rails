@@ -4,19 +4,11 @@
 
 <div class="row">
   <div class="col-md-8">
-    <h2>Unit Card</h2>
     <%= render @unit %>
   </div>
   <div class="col-md-4">
-    <h2>Additional Data</h2>
-
-    <p>
-      <strong>Wave:</strong>
-      <%= @unit.wave %>
-    </p>
-
     <% if @unit.models.present? %>
-      <h3>Models</h3>
+      <h2>Models</h2>
 
       <p>This unit can be represented by the following models:</p>
 
@@ -30,7 +22,7 @@
     <% end %>
 
     <% if @unit.products.present? %>
-      <h3 class="mt-4">Products</h3>
+      <h2 class="mt-4">Products</h2>
 
       <p>The models that represent this unit can found in the following products:</p>
 
