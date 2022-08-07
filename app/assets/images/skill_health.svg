@@ -4,7 +4,8 @@
 
 
 <circle cx="128" cy="128" r="124" fill="white" stroke="black" stroke-width="8"/>
-<circle cx="128" cy="80" r="40" fill="black"/>
-<polygon points="128 64 160 216 96 216" fill="black"/>
+<g transform="translate(-16 0)">
+<path fill="black" d="M144 222c-36-77-100-38-100-109 0-34 32-47 48-47 18 0 36 11 52 30 16-19 34-30 52-30 16 0 48 13 48 47 0 71-64 32-100 109Z"/>
+</g>
 
 </svg>

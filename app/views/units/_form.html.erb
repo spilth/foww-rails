@@ -84,71 +84,85 @@
 
   <div class="row g-3 mb-4">
     <div class="col-md-2">
+      <%= melee_skill_icon %>
       <%= form.label :melee_attribute, "Melee", class: "form-label" %>
       <%= form.select(:melee_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= pistol_skill_icon %>
       <%= form.label :pistol_attribute, "Pistol", class: "form-label" %>
       <%= form.select(:pistol_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= rifle_skill_icon %>
       <%= form.label :rifle_attribute, "Rifle", class: "form-label" %>
       <%= form.select(:rifle_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= heavy_weapon_skill_icon %>
       <%= form.label :heavy_weapon_attribute, "Heavy Weapon", class: "form-label" %>
       <%= form.select(:heavy_weapon_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= search_skill_icon %>
       <%= form.label :search_attribute, "Search", class: "form-label" %>
       <%= form.select(:search_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= battle_cry_skill_icon %>
       <%= form.label :battle_cry_attribute, "Battle Cry", class: "form-label" %>
       <%= form.select(:battle_cry_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
-      <%= form.label :battle_cry_range, "Battle Cry Range", class: "form-label" %>
-      <%= form.select(:battle_cry_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+      <%= battle_cry_skill_icon %>
+      <%= form.label :battle_cry_range_icon, "Battle Cry Range", class: "form-label" %>
+      <%= form.select(:battle_cry_range_icon, range_options, { include_blank: true }, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= presence_skill_icon %>
       <%= form.label :presence_attribute, "Presence", class: "form-label" %>
       <%= form.select(:presence_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
-      <%= form.label :presence_range, "Presence Range", class: "form-label" %>
-      <%= form.select(:presence_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+      <%= presence_skill_icon %>
+      <%= form.label :presence_range_icon, "Presence Range", class: "form-label" %>
+      <%= form.select(:presence_range_icon, range_options, { include_blank: true }, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= lockpick_skill_icon %>
       <%= form.label :lockpick_attribute, "Lockpick", class: "form-label" %>
       <%= form.select(:lockpick_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= computers_skill_icon %>
       <%= form.label :computers_attribute, "Computers", class: "form-label" %>
       <%= form.select(:computers_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= throw_skill_icon %>
       <%= form.label :throw_attribute, "Throw", class: "form-label" %>
       <%= form.select(:throw_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
-      <%= form.label :throw_range, "Throw Range", class: "form-label" %>
-      <%= form.select(:throw_range, range_options, { include_blank: true }, { class: "form-select" }) %>
+      <%= throw_skill_icon %>
+      <%= form.label :throw_range_icon, "Throw Range", class: "form-label" %>
+      <%= form.select(:throw_range_icon, range_options, { include_blank: true }, { class: "form-select" }) %>
     </div>
 
     <div class="col-md-2">
+      <%= health_skill_icon %>
       <%= form.label :health_attribute, "Health", class: "form-label" %>
       <%= form.select(:health_attribute, attribute_options, {}, { class: "form-select" }) %>
     </div>
@@ -201,46 +215,55 @@
 
   <div class="row g-3 mb-4">
     <div class="col-md-2">
+      <%= quick_action_prepare_icon %>
       <%= form.label :prepare_quick_actions, "Prepare", class: "form-label" %>
       <%= form.number_field :prepare_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>
 
     <div class="col-md-2">
+      <%= quick_action_movement_icon %>
       <%= form.label :movement_quick_actions, "Movement", class: "form-label" %>
       <%= form.number_field :movement_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>
 
     <div class="col-md-2">
+      <%= quick_action_attack_icon %>
       <%= form.label :attack_quick_actions, "Attack", class: "form-label" %>
       <%= form.number_field :attack_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>
 
     <div class="col-md-2">
+      <%= quick_action_melee_icon %>
       <%= form.label :melee_quick_actions, "Melee", class: "form-label" %>
       <%= form.number_field :melee_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>
 
     <div class="col-md-2">
+      <%= quick_action_pistol_icon %>
       <%= form.label :pistol_quick_actions, "Pistol", class: "form-label" %>
       <%= form.number_field :pistol_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>
 
     <div class="col-md-2">
+      <%= quick_action_rifle_icon %>
       <%= form.label :rifle_quick_actions, "Rifle", class: "form-label" %>
       <%= form.number_field :rifle_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>
 
     <div class="col-md-2">
+      <%= quick_action_heavy_weapon_icon %>
       <%= form.label :heavy_weapon_quick_actions, "Heavy Weapon", class: "form-label" %>
       <%= form.number_field :heavy_weapon_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>
 
     <div class="col-md-2">
+      <%= quick_action_target_icon %>
       <%= form.label :target_quick_actions, "Target", class: "form-label" %>
       <%= form.number_field :target_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>
 
     <div class="col-md-2">
+      <%= quick_action_use_expertise_icon %>
       <%= form.label :use_expertise_quick_actions, "Use Expertise", class: "form-label" %>
       <%= form.number_field :use_expertise_quick_actions, class: "form-control", min: 0, max: 2 %>
     </div>

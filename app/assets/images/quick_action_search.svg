@@ -9,9 +9,8 @@
 <line x1="36" y1="220" x2="220" y2="36" stroke="black" stroke-width="48"/>
 <circle cx="128" cy="128" r="104" fill="white" stroke="black" stroke-width="8"/>
 <g transform="scale(0.8) translate(32,32)">
-<ellipse cx="128" cy="128" rx="108" ry="60" fill="black"/>
-<circle cx="128" cy="128" r="44" fill="white"/>
-<circle cx="128" cy="128" r="12" fill="black"/>
+<circle cx="160" cy="96" r="52" fill="white" stroke="black" stroke-width="20"/>
+<line x1="120" y1="136" x2="48" y2="208" stroke="black" stroke-width="20"/>
 </g>
 
 </svg>
