@@ -8,10 +8,14 @@ module UnitsHelper
   end
 
   def move_icon(range)
+    return if range.nil?
+
     image_tag("move_#{range}.svg", width: 38, height: 32)
   end
 
   def charge_icon(range)
+    return if range.nil?
+
     image_tag("charge_#{range}.svg", width: 38, height: 32)
   end
 
@@ -58,10 +62,14 @@ module UnitsHelper
   end
 
   def battle_cry_range_icon(range)
+    return if range.nil?
+
     image_tag("battle_cry_#{range}.svg", width: 38, height: 32)
   end
 
   def awareness_range(range)
+    return if range.nil?
+
     image_tag("awareness_#{range}.svg", width: 38, height: 32)
   end
 
@@ -70,6 +78,8 @@ module UnitsHelper
   end
 
   def presence_range_icon(range)
+    return if range.nil?
+
     image_tag("presence_#{range}.svg", width: 38, height: 32)
   end
 
@@ -82,6 +92,8 @@ module UnitsHelper
   end
 
   def throw_range_icon(range)
+    return if range.nil?
+
     image_tag("throw_#{range}.svg", width: 38, height: 32)
   end
 
