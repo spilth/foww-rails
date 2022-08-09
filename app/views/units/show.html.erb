@@ -21,6 +21,18 @@
       <% end %>
     <% end %>
 
+    <% if @unit.forces.present? %>
+      <h2 class="mt-4">Forces</h2>
+
+      <p>This unit can be a part of the following Forces:</p>
+
+      <ul>
+        <% @unit.forces.each do |force| %>
+          <li><%= link_to force.name, force %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
     <% if @unit.products.present? %>
       <h2 class="mt-4">Products</h2>
 

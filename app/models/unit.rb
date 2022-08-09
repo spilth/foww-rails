@@ -71,6 +71,8 @@ class Unit < ApplicationRecord
 
   has_and_belongs_to_many :models
   has_many :products, -> { distinct }, through: :models
+  has_many :force_units
+  has_many :forces, through: :force_units
 
   validates :wave, presence: true
   validates :name, presence: true

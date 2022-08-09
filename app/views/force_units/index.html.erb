@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Force Units</h1>
+
+<div class="row">
+  <div class="col-md-10">
+    <table class="table table-borderless table-hover">
+      <thead>
+      <tr>
+        <th>Force</th>
+        <th>Unit</th>
+        <th>Cost</th>
+        <th>View</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @force_units.each do |force_unit| %>
+        <tr>
+          <td><%= link_to force_unit.force.name, force_unit.force %></td>
+          <td><%= link_to force_unit.unit.name, force_unit.unit %></td>
+          <td><%= force_unit.cost %></td>
+          <td><%= link_to "View", force_unit %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "New Force Unit", new_force_unit_path, class: "btn btn-primary" %>
+  </div>
+</div>

@@ -1,9 +1,9 @@
 class ForcesController < ApplicationController
-  before_action :set_force, only: %i[ show edit update destroy ]
+  before_action :set_force, only: %i[show edit update destroy]
 
   # GET /forces or /forces.json
   def index
-    @forces = Force.all
+    @forces = Force.all.order(:name)
   end
 
   # GET /forces/1 or /forces/1.json
@@ -58,13 +58,14 @@ class ForcesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_force
-      @force = Force.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def force_params
-      params.require(:force).permit(:name, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_force
+    @force = Force.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def force_params
+    params.require(:force).permit(:name, :description)
+  end
 end

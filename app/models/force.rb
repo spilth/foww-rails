@@ -10,4 +10,7 @@
 #
 class Force < ApplicationRecord
   validates :name, presence: true, uniqueness: true
+
+  has_many :force_units
+  has_many :units, through: :force_units
 end

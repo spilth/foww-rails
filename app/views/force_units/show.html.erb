@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Force Unit: <%= @force_unit.unit.name %> (<%= @force_unit.force.name %>)</h1>
+
+<div class="row">
+  <div class="col-md-8">
+    <p><b>Cost:</b> <%= @force_unit.cost %></p>
+
+    <h2>Unit</h2>
+    <%= render @force_unit.unit %>
+  </div>
+  <div class="col-md-4">
+    <h2>Actions</h2>
+
+    <%= link_to "Edit this force unit", edit_force_unit_path(@force_unit), class: "btn btn-warning" %>
+    <%= button_to "Destroy this force unit", @force_unit, method: :delete, class: "btn btn-danger" %>
+  </div>
+</div>
