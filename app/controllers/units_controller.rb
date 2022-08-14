@@ -111,6 +111,7 @@ class UnitsController < ApplicationController
       :prepare_quick_actions,
       :has_vats_ability,
       :has_critical_attacks_ability,
+      :has_luck_ability,
       model_ids: []
     )
   end
