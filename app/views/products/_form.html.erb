@@ -22,6 +22,11 @@
   </div>
 
   <div class="col-md-4">
+    <%= form.label :code, class: "form-label" %>
+    <%= form.text_field :code, class: "form-control" %>
+  </div>
+
+  <div class="col-md-4">
     <%= form.label :models, class: "form-label" %>
     <div class="overflow-scroll sublist border shadow-sm">
       <%= form.collection_check_boxes(:model_ids, Model.all.order(:name), :id, :name, {}, {}) do |b| %>
