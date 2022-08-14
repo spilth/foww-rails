@@ -9,7 +9,7 @@
   <div class="col-md-4">
     <h2>Additional Data</h2>
 
-    <p><b>Sprue ID:</b> <%= @model.sprue_id %></p>
+    <p><b>Sprue ID:</b> <%= @model.sprue_ids %></p>
 
     <% if @model.units.present? %>
       <h2>Units</h2>
@@ -31,7 +31,7 @@
       <ul>
         <% @model.products.order(:name).each do |product| %>
           <figure class="figure">
-            <%= link_to image_tag(product.image.variant(resize_to_limit: [256, 256]), class: "figure-img img-fluid rounded"), product if product.image.attached?%>
+            <%= link_to image_tag(product.image.variant(resize_to_limit: [256, 256]), class: "figure-img img-fluid rounded"), product if product.image.attached? %>
 
             <figcaption class="figure-caption"><%= link_to product.name, product %></figcaption>
           </figure>
