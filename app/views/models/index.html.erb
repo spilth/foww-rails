@@ -8,6 +8,7 @@
       <thead>
       <tr>
         <th>Name</th>
+        <th>Code</th>
         <th>Image</th>
       </tr>
       </thead>
@@ -16,6 +17,7 @@
       <% @models.each do |model| %>
         <tr>
           <td><%= link_to model.name, model %></td>
+          <td><%= model.code %></td>
           <td><%= link_to image_tag(model.image.variant(resize_to_limit: [128, 128]), height: 128), model if model.image.attached? %></td>
         </tr>
       <% end %>
