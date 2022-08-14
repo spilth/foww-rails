@@ -14,6 +14,7 @@
 #  endurance                   :integer
 #  energy_armor                :integer
 #  energy_strong_armor_bonus   :integer
+#  has_vats_ability            :boolean
 #  health_attribute            :integer
 #  heavy_weapon_attribute      :integer
 #  heavy_weapon_quick_actions  :integer

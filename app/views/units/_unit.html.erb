@@ -74,5 +74,9 @@
     <%= quick_action_icons(unit) %>
   </p>
 
+  <% if unit.has_vats_ability? %>
+    <p>Can use V.A.T.S.</p>
+  <% end %>
+
   <p>This Unit is from Wave <%= unit.wave %>.</p>
 </div>

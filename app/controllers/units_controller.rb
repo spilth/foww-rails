@@ -109,6 +109,7 @@ class UnitsController < ApplicationController
       :target_quick_actions,
       :use_expertise_quick_actions,
       :prepare_quick_actions,
+      :has_vats_ability,
       model_ids: []
     )
   end
