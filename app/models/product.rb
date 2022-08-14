@@ -2,11 +2,11 @@
 #
 # Table name: products
 #
-#  id         :bigint           not null, primary key
-#  code       :string
-#  name       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id           :bigint           not null, primary key
+#  name         :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  packaging_id :string
 #
 class Product < ApplicationRecord
   has_one_attached :image
