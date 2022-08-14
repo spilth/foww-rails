@@ -110,6 +110,7 @@ class UnitsController < ApplicationController
       :use_expertise_quick_actions,
       :prepare_quick_actions,
       :has_vats_ability,
+      :has_critical_attacks_ability,
       model_ids: []
     )
   end

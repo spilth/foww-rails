@@ -78,5 +78,9 @@
     <p>Can use V.A.T.S.</p>
   <% end %>
 
+  <% if unit.has_critical_attacks_ability? %>
+    <p>Can use Critical Attacks</p>
+  <% end %>
+
   <p>This Unit is from Wave <%= unit.wave %>.</p>
 </div>
