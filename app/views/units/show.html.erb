@@ -1,10 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Unit: <%= @unit.name %></h1>
+<h1>
+  Unit: <%= @unit.name %>
+
+  <% if @unit.type.present? %>
+    <small>(<%= @unit.type.name %>)</small>
+  <% end %>
+
+</h1>
 
 <div class="row">
   <div class="col-md-8">
-    <%= renderw @unit %>
+    <%= render @unit %>
   </div>
   <div class="col-md-4">
     <% if @unit.models.present? %>

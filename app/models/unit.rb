@@ -50,6 +50,15 @@
 #  wave                         :integer
 #  created_at                   :datetime         not null
 #  updated_at                   :datetime         not null
+#  type_id                      :bigint
+#
+# Indexes
+#
+#  index_units_on_type_id  (type_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (type_id => types.id)
 #
 class Unit < ApplicationRecord
   ATTRIBUTES = {
@@ -71,6 +80,8 @@ class Unit < ApplicationRecord
     blue: 10,
     black: 12
   }
+
+  belongs_to :type
 
   has_and_belongs_to_many :models
   has_many :products, -> { distinct }, through: :models
