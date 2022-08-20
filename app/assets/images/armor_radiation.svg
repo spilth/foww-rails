@@ -1,0 +1,18 @@
+<svg viewBox="-16 0 288 256" width="100%" height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+<path fill="white" stroke="black" stroke-width="8" d="M13 159c3-12 22-18 27-34 10-37 23-72 60-72h65c18 0 62 30 57 75-5 44 24 39 22 52-2 19-42 30-69 31-70 1-41-42-101-41-64 0-63-4-61-11Z"/>
+<g transform="translate(72 50) scale(0.49)">
+<mask id="mask">
+<path d="M128 128 L 0 128 L 0 0 L 54 0" fill="white"/>
+<path d="M128 128 L 256 128 L 256 0 L 202 0" fill="white"/>
+<path d="M128 128 L 54 256 L 202 256" fill="white"/>
+<circle cx="128" cy="128" r="32" fill="black"/>
+</mask>
+<circle cx="128" cy="128" r="128" fill="black" mask="url(#mask)"/>
+<circle cx="128" cy="128" r="16" fill="black"/>
+</g>
+
+</svg>

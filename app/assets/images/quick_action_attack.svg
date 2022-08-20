@@ -8,6 +8,8 @@
 <line x1="36" y1="36" x2="220" y2="220" stroke="black" stroke-width="48"/>
 <line x1="36" y1="220" x2="220" y2="36" stroke="black" stroke-width="48"/>
 <circle cx="128" cy="128" r="104" fill="white" stroke="black" stroke-width="8"/>
-<polygon points="129 61 144 88 175 59 168 103 200 88 177 124 204 151 169 153 185 200 144 170 125 220 112 166 71 199 90 153 58 151 84 130 48 120 95 109 68 59 124 97 129 61" fill="black"/>
+<g transform="scale(0.64) translate(76 88)">
+<path d="m133 3 24 43 49-46-11 70 51-24-37 57 43 43-56 3 26 75-65-48-31 80-20-86-65 53 30-74-51-3 41-33L4 97l75-17L36 0l89 60 8-57Z"/>
+</g>
 
 </svg>

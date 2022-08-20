@@ -1,0 +1,11 @@
+<svg viewBox="-16 0 288 256" width="100%" height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+<path fill="white" stroke="black" stroke-width="8" d="M13 159c3-12 22-18 27-34 10-37 23-72 60-72h65c18 0 62 30 57 75-5 44 24 39 22 52-2 19-42 30-69 31-70 1-41-42-101-41-64 0-63-4-61-11Z"/>
+<g transform="translate(74 60) scale(0.45)">
+<path d="M91 0h93l-53 97h76L98 256l14-106H50L91 0Z"/>
+</g>
+
+</svg>

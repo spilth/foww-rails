@@ -1,0 +1,13 @@
+<svg viewBox="-16 0 288 256" width="100%" height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+<path fill="white" stroke="black" stroke-width="8" d="M13 159c3-12 22-18 27-34 10-37 23-72 60-72h65c18 0 62 30 57 75-5 44 24 39 22 52-2 19-42 30-69 31-70 1-41-42-101-41-64 0-63-4-61-11Z"/>
+<g transform="translate(74 64) scale(0.43)">
+<path fill="#fff" d="M29 8h198v168c0 21-41 72-99 72s-99-52-99-72V8Z"/>
+<path d="M29 0c-4 0-8 4-8 8v169c0 6 4 17 12 28 17 24 51 51 95 51s78-27 95-50c8-12 12-22 12-29V8c0-4-4-8-8-8H29Zm8 16h182v161c0 6-6 17-16 28-16 18-43 35-75 35s-59-18-75-35c-10-11-16-22-16-28V16Z"/>
+<path stroke="#000" stroke-width="12" d="M128 8h99v116h-99zM29 124h99v122c-65-7-99-70-99-70v-52Z"/>
+</g>
+
+</svg>

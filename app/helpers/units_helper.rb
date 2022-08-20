@@ -168,4 +168,16 @@ module UnitsHelper
   def quick_action_target_icon
     tag.i(class: "fa-fw fa-solid fa-crosshairs", title: "Target")
   end
+
+  def physical_armor_icon
+    image_tag("armor_physical.svg", width: 38, height: 32)
+  end
+
+  def energy_armor_icon
+    image_tag("armor_energy.svg", width: 38, height: 32)
+  end
+
+  def radiation_armor_icon
+    image_tag("armor_radiation.svg", width: 38, height: 32)
+  end
 end

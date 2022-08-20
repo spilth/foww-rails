@@ -54,17 +54,17 @@
   </p>
 
   <p>
-    <i class="fa-solid fa-shield-halved"></i>
+    <%= physical_armor_icon %>
     <%= unit.physical_armor %><%= "+#{unit.physical_strong_armor_bonus}" if unit.physical_strong_armor_bonus %>
   </p>
 
   <p>
-    <i class="fa-solid fa-bolt-lightning"></i>
+    <%= energy_armor_icon %>
     <%= unit.energy_armor %><%= "+#{unit.energy_strong_armor_bonus}" if unit.energy_strong_armor_bonus %>
   </p>
 
   <p>
-    <i class="fa-solid fa-radiation"></i>
+    <%= radiation_armor_icon %>
     <%= "X" if unit.radiation_immunity %>
     <%= unit.radiation_armor if !unit.radiation_immunity %>
   </p>
