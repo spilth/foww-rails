@@ -81,7 +81,7 @@ class Unit < ApplicationRecord
     black: 12
   }
 
-  belongs_to :type
+  belongs_to :type, optional: true
 
   has_and_belongs_to_many :models
   has_many :products, -> { distinct }, through: :models
