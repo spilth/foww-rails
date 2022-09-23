@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_15_012914) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_23_215541) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -138,6 +138,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_15_012914) do
     t.boolean "has_critical_attacks_ability"
     t.boolean "has_luck_ability"
     t.bigint "type_id"
+    t.boolean "has_dog_handler_ability"
     t.index ["type_id"], name: "index_units_on_type_id"
   end
 

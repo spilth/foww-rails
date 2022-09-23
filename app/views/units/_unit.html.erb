@@ -26,7 +26,6 @@
     <strong>END:</strong>
     <%= unit.endurance %>
     <%= skill_icons(unit, "endurance") %>
-
   </p>
 
   <p>
@@ -84,6 +83,10 @@
 
   <% if unit.has_luck_ability? %>
     <p>Can use Luck</p>
+  <% end %>
+
+  <% if unit.has_dog_handler_ability? %>
+    <p><i class="fa-solid fa-dog" title="Dog Handler"></i></p>
   <% end %>
 
   <p>This Unit is from Wave <%= unit.wave %>.</p>
