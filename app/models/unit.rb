@@ -48,6 +48,7 @@
 #  target_quick_actions         :integer
 #  throw_attribute              :integer
 #  throw_range                  :integer
+#  unimpeded                    :boolean
 #  unique                       :boolean
 #  use_expertise_quick_actions  :integer
 #  wave                         :integer

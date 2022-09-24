@@ -75,6 +75,10 @@ module UnitsHelper
     image_tag("cannot_climb.svg", width: 38, height: 32)
   end
 
+  def unimpeded_icon
+    image_tag("unimpeded.svg", width: 38, height: 32)
+  end
+
   def awareness_range(range)
     return if range.nil?
 

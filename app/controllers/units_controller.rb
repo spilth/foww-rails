@@ -115,6 +115,7 @@ class UnitsController < ApplicationController
       :has_dog_handler_ability,
       :immunity_to_battle_cry,
       :cannot_climb,
+      :unimpeded,
       :type_id,
       model_ids: []
     )
