@@ -67,6 +67,10 @@ module UnitsHelper
     image_tag("battle_cry_#{range}.svg", width: 38, height: 32)
   end
 
+  def immunity_to_battle_cry_icon
+    image_tag("battle_cry_immunity.svg", width: 38, height: 32)
+  end
+
   def awareness_range(range)
     return if range.nil?
 

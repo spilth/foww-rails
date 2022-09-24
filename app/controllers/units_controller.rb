@@ -113,6 +113,7 @@ class UnitsController < ApplicationController
       :has_critical_attacks_ability,
       :has_luck_ability,
       :has_dog_handler_ability,
+      :immunity_to_battle_cry,
       :type_id,
       model_ids: []
     )

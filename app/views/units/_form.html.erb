@@ -279,6 +279,13 @@
   <div class="row g-3 mb-4">
     <div class="col-md-2">
       <div class="form-check form-switch">
+        <%= form.check_box :immunity_to_battle_cry, class: "form-check-input" %>
+        <%= form.label :immunity_to_battle_cry, "Immunity to Battle Cry", class: "form-check-label" %>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="form-check form-switch">
         <%= form.check_box :has_vats_ability, class: "form-check-input" %>
         <%= form.label :has_vats_ability, "V.A.T.S", class: "form-check-label" %>
       </div>

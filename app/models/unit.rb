@@ -21,6 +21,7 @@
 #  health_attribute             :integer
 #  heavy_weapon_attribute       :integer
 #  heavy_weapon_quick_actions   :integer
+#  immunity_to_battle_cry       :boolean
 #  intelligence                 :integer
 #  lockpick_attribute           :integer
 #  luck                         :integer

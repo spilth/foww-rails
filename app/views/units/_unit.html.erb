@@ -69,6 +69,10 @@
     <%= quick_action_icons(unit) %>
   </p>
 
+  <% if unit.immunity_to_battle_cry? %>
+    <%= immunity_to_battle_cry_icon %>
+  <% end %>
+
   <% if unit.has_vats_ability? %>
     <p>Can use V.A.T.S.</p>
   <% end %>
