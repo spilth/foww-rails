@@ -73,6 +73,10 @@
     <%= immunity_to_battle_cry_icon %>
   <% end %>
 
+  <% if unit.cannot_climb? %>
+    <%= cannot_climb_icon %>
+  <% end %>
+
   <% if unit.has_vats_ability? %>
     <p>Can use V.A.T.S.</p>
   <% end %>

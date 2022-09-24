@@ -8,6 +8,7 @@
 #  awareness_range              :integer
 #  battle_cry_attribute         :integer
 #  battle_cry_range             :integer
+#  cannot_climb                 :boolean
 #  charge_range                 :integer
 #  charisma                     :integer
 #  computers_attribute          :integer

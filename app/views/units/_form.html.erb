@@ -286,6 +286,13 @@
 
     <div class="col-md-2">
       <div class="form-check form-switch">
+        <%= form.check_box :cannot_climb, class: "form-check-input" %>
+        <%= form.label :cannot_climb, "Cannot Climb", class: "form-check-label" %>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="form-check form-switch">
         <%= form.check_box :has_vats_ability, class: "form-check-input" %>
         <%= form.label :has_vats_ability, "V.A.T.S", class: "form-check-label" %>
       </div>
