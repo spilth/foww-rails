@@ -8,6 +8,7 @@
       <thead>
       <tr>
         <th>Name</th>
+        <th>Wave</th>
         <th><%= image_tag("move_black.svg", width: 38, height: 32) %></th>
         <th><%= image_tag("charge_black.svg", width: 38, height: 32) %></th>
         <th>S</th>
@@ -28,6 +29,7 @@
       <% @units.each do |unit| %>
         <tr>
           <td><%= link_to unit.name, unit %></td>
+          <td><%= unit.wave %></td>
           <td><%= move_icon(unit.move_range) %></td>
           <td><%= charge_icon(unit.charge_range) %></td>
           <td><%= unit.strength %></td>
