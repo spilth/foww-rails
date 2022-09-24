@@ -68,9 +68,7 @@
     <%= awareness_range(unit.awareness_range) if unit.awareness_range %>
     <%= quick_action_icons(unit) %>
     <%= luck_icon if unit.has_luck_ability? %>
-    <% if unit.has_critical_attacks_ability? %>
-      <i class="fa-regular fa-circle-exclamation"></i>
-    <% end %>
+    <%= critical_point_icon if unit.has_critical_attacks_ability? %>
     <%= dog_handler_icon if unit.has_dog_handler_ability %>
     <%= cannot_climb_icon if unit.cannot_climb? %>
     <%= unimpeded_icon if unit.unimpeded? %>

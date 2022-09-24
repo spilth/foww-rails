@@ -64,6 +64,10 @@ module UnitsHelper
     image_tag("luck.svg", width: 38, height: 32)
   end
 
+  def critical_point_icon
+    image_tag("critical_point.svg", width: 38, height: 32)
+  end
+
   def health_skill_icon
     image_tag("skill_health.svg", width: 38, height: 32)
   end

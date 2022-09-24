@@ -1,0 +1,13 @@
+<svg viewBox="-16 0 288 256" width="100%" height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+<g transform="translate(-16 0)">
+<rect x="16" y="16" width="224" height="224" fill="#FDE64C" stroke="black" stroke-width="8"/>
+<polygon points="96 36 160 36 144 192 112 192" fill="black"/>
+<circle cx="128" cy="192" r="44" fill="#FDE64C"/>
+<circle cx="128" cy="192" r="32" fill="black"/>
+</g>
+
+</svg>
