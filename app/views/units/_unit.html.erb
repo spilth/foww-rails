@@ -67,34 +67,18 @@
   <p>
     <%= awareness_range(unit.awareness_range) if unit.awareness_range %>
     <%= quick_action_icons(unit) %>
+    <%= luck_icon if unit.has_luck_ability? %>
+    <% if unit.has_critical_attacks_ability? %>
+      <i class="fa-regular fa-circle-exclamation"></i>
+    <% end %>
+    <%= dog_handler_icon if unit.has_dog_handler_ability %>
+    <%= cannot_climb_icon if unit.cannot_climb? %>
+    <%= unimpeded_icon if unit.unimpeded? %>
+    <%= immunity_to_battle_cry_icon if unit.immunity_to_battle_cry? %>
   </p>
-
-  <% if unit.immunity_to_battle_cry? %>
-    <%= immunity_to_battle_cry_icon %>
-  <% end %>
-
-  <% if unit.cannot_climb? %>
-    <%= cannot_climb_icon %>
-  <% end %>
-
-  <% if unit.unimpeded? %>
-    <%= unimpeded_icon %>
-  <% end %>
 
   <% if unit.has_vats_ability? %>
     <p>Can use V.A.T.S.</p>
-  <% end %>
-
-  <% if unit.has_critical_attacks_ability? %>
-    <p>Can use Critical Attacks</p>
-  <% end %>
-
-  <% if unit.has_luck_ability? %>
-    <p>Can use Luck</p>
-  <% end %>
-
-  <% if unit.has_dog_handler_ability? %>
-    <p><i class="fa-solid fa-dog" title="Dog Handler"></i></p>
   <% end %>
 
   <p>This Unit is from Wave <%= unit.wave %>.</p>

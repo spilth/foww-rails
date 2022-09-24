@@ -1,0 +1,11 @@
+<svg viewBox="-16 0 288 256" width="100%" height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+<circle cx="128" cy="128" r="124" fill="white" stroke="black" stroke-width="8"/>
+<g transform="translate(-16 0)">
+<path d="M47 169c1-9 35-59 49-83 2-18 17-58 36-59 5-1-2 33 5 33 26-4 12-22 32-22 5 9-14 44 64 69 26 11 2 37-29 46-10 3-42-7-50-3-8 3 25 40 18 78-49 19-109-14-125-59Z" fill="black"/>
+</g>
+
+</svg>

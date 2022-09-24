@@ -45,10 +45,10 @@ module UnitsHelper
     icons = []
     icons << quick_action_movement_icon * unit.movement_quick_actions.to_i
     icons << quick_action_attack_icon * unit.attack_quick_actions.to_i
-    icons << melee_skill_icon * unit.melee_quick_actions.to_i
-    icons << pistol_skill_icon * unit.pistol_quick_actions.to_i
-    icons << rifle_skill_icon * unit.rifle_quick_actions.to_i
-    icons << heavy_weapon_skill_icon * unit.heavy_weapon_quick_actions.to_i
+    icons << quick_action_melee_icon * unit.melee_quick_actions.to_i
+    icons << quick_action_pistol_icon * unit.pistol_quick_actions.to_i
+    icons << quick_action_rifle_icon * unit.rifle_quick_actions.to_i
+    icons << quick_action_heavy_weapon_icon * unit.heavy_weapon_quick_actions.to_i
     icons << target_icon * unit.target_quick_actions.to_i
     icons << quick_action_use_expertise_icon * unit.use_expertise_quick_actions.to_i
     icons << quick_action_prepare_icon * unit.prepare_quick_actions.to_i
@@ -56,6 +56,13 @@ module UnitsHelper
   end
 
   private
+  def dog_handler_icon
+    image_tag("dog_handler.svg", width: 38, height: 32)
+  end
+
+  def luck_icon
+    image_tag("luck.svg", width: 38, height: 32)
+  end
 
   def health_skill_icon
     image_tag("skill_health.svg", width: 38, height: 32)
@@ -147,6 +154,22 @@ module UnitsHelper
 
   def quick_action_attack_icon
     image_tag("quick_action_attack.svg", width: 38, height: 32)
+  end
+
+  def quick_action_melee_icon
+    image_tag("quick_action_melee.svg", width: 38, height: 32)
+  end
+
+  def quick_action_pistol_icon
+    image_tag("quick_action_pistol.svg", width: 38, height: 32)
+  end
+
+  def quick_action_rifle_icon
+    image_tag("quick_action_rifle.svg", width: 38, height: 32)
+  end
+
+  def quick_action_heavy_weapon_icon
+    image_tag("quick_action_heavy_weapon.svg", width: 38, height: 32)
   end
 
   def quick_action_use_expertise_icon
