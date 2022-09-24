@@ -7,6 +7,7 @@
     <table class="table table-borderless table-hover">
       <thead>
       <tr>
+        <th><i class="fa-solid fa-face-grin" title="Unique"></i></th>
         <th>Name</th>
         <th>Wave</th>
         <th><%= image_tag("move_black.svg", width: 38, height: 32) %></th>
@@ -28,6 +29,7 @@
 
       <% @units.each do |unit| %>
         <tr>
+          <td><%= tag.i(class: "fa-solid fa-face-grin", title: "Unique") if unit.unique? %></td>
           <td><%= link_to unit.name, unit %></td>
           <td><%= unit.wave %></td>
           <td><%= move_icon(unit.move_range) %></td>
