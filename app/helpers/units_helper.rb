@@ -56,12 +56,17 @@ module UnitsHelper
   end
 
   private
+
   def dog_handler_icon
     image_tag("dog_handler.svg", width: 38, height: 32)
   end
 
   def luck_icon
     image_tag("luck.svg", width: 38, height: 32)
+  end
+
+  def unique_unit_icon
+    image_tag("unique_unit.svg", width: 38, height: 32)
   end
 
   def critical_point_icon
@@ -182,22 +187,6 @@ module UnitsHelper
 
   def quick_action_prepare_icon
     image_tag("quick_action_prepare.svg", width: 38, height: 32)
-  end
-
-  def quick_action_melee_icon
-    image_tag("quick_action_melee.svg", width: 38, height: 32)
-  end
-
-  def quick_action_pistol_icon
-    image_tag("quick_action_pistol.svg", width: 38, height: 32)
-  end
-
-  def quick_action_rifle_icon
-    image_tag("quick_action_rifle.svg", width: 38, height: 32)
-  end
-
-  def quick_action_heavy_weapon_icon
-    image_tag("quick_action_heavy_weapon.svg", width: 38, height: 32)
   end
 
   def quick_action_throw_icon

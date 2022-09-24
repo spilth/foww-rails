@@ -1,5 +1,5 @@
 <div id="<%= dom_id unit %>">
-  <p><%= tag.i(class: "fa-solid fa-face-grin", title: "Unique") if unit.unique? %></p>
+  <p><%= unique_unit_icon if unit.unique? %></p>
 
   <p>
     <%= move_icon(unit.move_range) %>
