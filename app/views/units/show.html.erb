@@ -1,13 +1,21 @@
-<p style="color: green"><%= notice %></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/units/">Units</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @unit.name %></li>
+  </ol>
+</nav>
 
 <h1>
-  Unit: <%= @unit.name %>
+  <%= @unit.name %>
 
   <% if @unit.type.present? %>
     <small>(<%= @unit.type.name %>)</small>
   <% end %>
-
 </h1>
+
+<p style="color: green"><%= notice %></p>
+
 
 <div class="row">
   <div class="col-md-8">
