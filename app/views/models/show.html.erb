@@ -1,16 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/models/">Models</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @model.name %></li>
+  </ol>
+</nav>
 
-<h1>Model: <%= @model.name %></h1>
+<h1><%= @model.name %></h1>
+
+<p style="color: green"><%= notice %></p>
 
 <div class="row">
   <div class="col-md-8">
     <%= render @model %>
   </div>
   <div class="col-md-4">
-    <h2>Additional Data</h2>
-
-    <p><b>Sprue ID:</b> <%= @model.sprue_id %></p>
-
     <% if @model.units.present? %>
       <h2>Units</h2>
 
@@ -30,14 +34,14 @@
 
       <ul>
         <% @model.products.order(:name).each do |product| %>
-          <figure class="figure">
-            <%= link_to image_tag(product.image.variant(resize_to_limit: [256, 256]), class: "figure-img img-fluid rounded"), product if product.image.attached? %>
-
-            <figcaption class="figure-caption"><%= link_to product.name, product %></figcaption>
-          </figure>
+          <li><%= link_to product.name, product %></li>
         <% end %>
       </ul>
     <% end %>
+
+    <h2>Additional Data</h2>
+
+    <p><b>Sprue ID:</b> <%= @model.sprue_id %></p>
 
     <h2>Actions</h2>
 

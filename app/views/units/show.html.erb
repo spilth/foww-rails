@@ -53,13 +53,11 @@
 
       <p>The models that represent this unit can found in the following products:</p>
 
-      <% @unit.products.each do |product| %>
-        <figure class="figure">
-          <%= link_to image_tag(product.image.variant(resize_to_limit: [256, 256]), class: "figure-img img-fluid rounded"), product if product.image.attached? %>
-
-          <figcaption class="figure-caption"><%= link_to product.name, product %></figcaption>
-        </figure>
-      <% end %>
+      <ul>
+        <% @unit.products.each do |product| %>
+          <li><%= link_to product.name, product %></li>
+        <% end %>
+      </ul>
     <% end %>
 
     <h2>Actions</h2>

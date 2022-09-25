@@ -1,3 +1,12 @@
-<h1>Editing model</h1>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/models/">Models</a></li>
+    <li class="breadcrumb-item"><%= link_to @model.name, @model %></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit</li>
+  </ol>
+</nav>
+
+<h1>Editing <%= @model.name %></h1>
 
 <%= render "form", model: @model %>
