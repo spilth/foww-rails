@@ -1,6 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/products/">Products</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @product.name %></li>
+  </ol>
+</nav>
 
-<h1>Product: <%= @product.name %></h1>
+<h1><%= @product.name %></h1>
+
+<p style="color: green"><%= notice %></p>
 
 <div class="row">
   <div class="col-md-8">
@@ -9,6 +17,7 @@
   <div class="col-md-4">
     <h2>Additional Data</h2>
 
+    <p><b>Wave:</b> <%= @product.wave %></p>
     <p><b>Packaging ID:</b> <%= @product.packaging_id %></p>
 
     <% if @product.models.present? %>

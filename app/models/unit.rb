@@ -92,7 +92,6 @@ class Unit < ApplicationRecord
   has_many :force_units
   has_many :forces, through: :force_units
 
-  validates :wave, presence: true
   validates :name, presence: true
   validates :move_range, presence: true
   validates :charge_range, presence: true

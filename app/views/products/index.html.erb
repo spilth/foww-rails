@@ -1,6 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active">Products</li>
+  </ol>
+</nav>
 
 <h1>Products</h1>
+
+<p style="color: green"><%= notice %></p>
 
 <div class="row">
   <div class="col-md-10">
@@ -8,8 +15,7 @@
       <thead>
       <tr>
         <th>Name</th>
-        <th>Packaging ID</th>
-        <th>Image</th>
+        <th>Wave</th>
       </tr>
       </thead>
 
@@ -17,8 +23,7 @@
       <% @products.each do |product| %>
         <tr>
           <td><%= link_to product.name, product %></td>
-          <td><%= product.packaging_id %></td>
-          <td><%= link_to image_tag(product.image.variant(resize_to_limit: [128, 128]), height: 128), product if product.image.attached? %></td>
+          <td><%= product.wave %></td>
         </tr>
       <% end %>
       </tbody>

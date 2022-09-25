@@ -17,13 +17,18 @@
   </div>
 
   <div class="col-md-4">
-    <%= form.label :image, class: "form-label" %>
-    <%= form.file_field :image, class: "form-control" %>
+    <%= form.label :wave, class: "form-label" %>
+    <%= form.number_field :wave, class: "form-control" %>
   </div>
 
   <div class="col-md-4">
     <%= form.label :packaging_id, "Packaging ID", class: "form-label" %>
     <%= form.text_field :packaging_id, class: "form-control" %>
+  </div>
+
+  <div class="col-md-4">
+    <%= form.label :image, class: "form-label" %>
+    <%= form.file_field :image, class: "form-control" %>
   </div>
 
   <div class="col-md-4">

@@ -4,6 +4,7 @@
 #
 #  id           :bigint           not null, primary key
 #  name         :string
+#  wave         :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  packaging_id :string
